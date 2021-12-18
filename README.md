@@ -1,5 +1,4 @@
-# dotfiles
-Dotfile configurations
+# Dotfiles
 
 Create a symbolic links for your files:
 ```
