@@ -78,7 +78,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "---------------Imports
-"runtime ./manager.vim
+runtime ./manager.vim
 
-"colorscheme gruvbox
-"set background=dark
+" colorscheme 
