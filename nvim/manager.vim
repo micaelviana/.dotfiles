@@ -11,6 +11,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Theme
     Plug 'arcticicestudio/nord-vim'
+    "statusline
+    Plug 'itchyny/lightline.vim'
     "autopairs
     Plug 'cohama/lexima.vim'
     Plug 'preservim/nerdtree' "Sidebar
