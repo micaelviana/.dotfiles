@@ -7,14 +7,10 @@ endif
 
 "List of plugins
 call plug#begin('~/.vim/plugged')
-    "autocomplete + LSP 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    "Theme
-    Plug 'arcticicestudio/nord-vim'
-    "statusline
-    Plug 'itchyny/lightline.vim'
-    "autopairs
-    Plug 'cohama/lexima.vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
+    Plug 'arcticicestudio/nord-vim' "Theme
+    Plug 'itchyny/lightline.vim' "statusline
+    Plug 'cohama/lexima.vim' "autopairs
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not stable
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
@@ -22,7 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdcommenter' "Assistant to insert comments
     Plug 'https://github.com/ctrlpvim/ctrlp.vim' "While telescope is not  here
     Plug 'ryanoasis/vim-devicons' "Icons for VIM
-    Plug 'haya14busa/is.vim'
+    Plug 'haya14busa/is.vim' "is.vim - incremental search improved
     Plug 'SirVer/ultisnips' "Create new snippets
     Plug 'honza/vim-snippets' "Collection of snippets for various languages
     "
