@@ -7,6 +7,8 @@ endif
 
 "List of plugins
 call plug#begin('~/.vim/plugged')
+    "autocomplete + LSP 
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Theme
     Plug 'arcticicestudio/nord-vim'
     "autopairs
