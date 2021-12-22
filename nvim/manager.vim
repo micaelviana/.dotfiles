@@ -16,10 +16,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
     Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
     Plug 'preservim/nerdcommenter' "Assistant to insert comments
-    Plug 'https://github.com/ctrlpvim/ctrlp.vim' "While telescope is not  here
-    Plug 'ryanoasis/vim-devicons' "Icons for VIM
     Plug 'haya14busa/is.vim' "is.vim - incremental search improved
     Plug 'SirVer/ultisnips' "Create new snippets
     Plug 'honza/vim-snippets' "Collection of snippets for various languages
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
+    Plug 'junegunn/fzf.vim'
+    Plug 'ryanoasis/vim-devicons' "Icons for VIM
     "
 call plug#end()
