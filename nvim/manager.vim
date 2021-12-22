@@ -21,7 +21,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets' "Collection of snippets for various languages
     Plug 'justinmk/vim-sneak' "The missing motion for vim
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
-Plug 'AckslD/nvim-neoclip.lua'
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify' "start screen
     Plug 'ryanoasis/vim-devicons' "Icons for VIM
