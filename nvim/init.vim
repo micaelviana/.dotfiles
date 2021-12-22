@@ -44,7 +44,6 @@ nnoremap <silent><leader>q :x <cr>
 "select the entire document
 map <C-a> <esc>ggVG<CR>
 "shortcut to  splits (from YADR dotfiles)
-nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 "reload Vim File 
 nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
