@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips' "Create new snippets
     Plug 'honza/vim-snippets' "Collection of snippets for various languages
     Plug 'justinmk/vim-sneak' "The missing motion for vim
+    Plug 'unblevable/quick-scope' "moving horizontally
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify' "start screen
