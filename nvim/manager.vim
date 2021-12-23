@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'cohama/lexima.vim' "autopairs
     Plug 'preservim/nerdtree' "Sidebar
-    Plug 'sheerun/vim-polyglot' "while Treesitter is not stable
+    Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
     Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
     Plug 'preservim/nerdcommenter' "Assistant to insert comments
