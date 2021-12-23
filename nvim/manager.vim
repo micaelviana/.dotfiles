@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
     Plug 'arcticicestudio/nord-vim' "Theme
+    Plug 'haishanh/night-owl.vim' "Theme
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'cohama/lexima.vim' "autopairs
     Plug 'preservim/nerdtree' "Sidebar
