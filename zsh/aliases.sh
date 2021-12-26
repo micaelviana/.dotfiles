@@ -13,7 +13,7 @@ alias si="__zoxide_zi"
 
 alias lunarvim="lvim +PackerCompile +q"
 alias uwu="conky -c ~/.conky/Dracula/dracula-01.conkyrc"
-
+alias gcom="git commit -m"
 #Platform exclusive
 aur=yay
 if which pacman > /dev/null;then
