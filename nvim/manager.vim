@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim' "Theme
     Plug 'haishanh/night-owl.vim' "Theme
     Plug 'itchyny/lightline.vim' "statusline
-    Plug 'cohama/lexima.vim' "autopairs
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
