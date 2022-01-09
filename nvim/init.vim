@@ -37,7 +37,7 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open im
 
 
 "------------------------FUNCTIONS
-function s:cur()
+function Cur()
     lcd %:p:h
 endfunction
 
