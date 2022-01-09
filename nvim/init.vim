@@ -32,8 +32,14 @@ set nowritebackup
 set noswapfile
 
 "---------------AUTOCOMMANDS
-autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
+"autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
+
+
+"------------------------FUNCTIONS
+function s:cur()
+    lcd %:p:h
+endfunction
 
 "----------KEYMAPPINGS----------
 "set mapleader
@@ -44,7 +50,7 @@ nnoremap <silent><leader>q :x <cr>
 "select the entire document
 map <C-a> <esc>ggVG<CR>
 "reload Vim File 
-nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
+nnoremap <leader>rv :source % <cr>
 "edit  vim file in a new tab
 nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 "shortcut for switch between modes faster
