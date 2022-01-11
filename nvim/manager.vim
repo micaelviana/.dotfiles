@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
     Plug 'arcticicestudio/nord-vim' "Theme
-    Plug 'haishanh/night-owl.vim' "Theme
+    Plug 'arzg/vim-colors-xcode' "light theme
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
