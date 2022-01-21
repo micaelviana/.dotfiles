@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify' "start screen
+    "Candy
     Plug 'ryanoasis/vim-devicons' "Icons for VIM
     "
 call plug#end()
