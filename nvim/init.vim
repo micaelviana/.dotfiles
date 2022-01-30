@@ -84,3 +84,4 @@ nnoremap <C-l> <C-w>l
 runtime ./manager.vim
 
 colorscheme nord
+hi Normal guibg=NONE ctermbg=NONE
