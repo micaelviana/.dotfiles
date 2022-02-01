@@ -47,8 +47,6 @@ let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>q :x <cr>
-"select the entire document
-map <C-a> <esc>ggVG<CR>
 "reload Vim File 
 nnoremap <leader>rv :source % <cr>
 "edit  vim file in a new tab
