@@ -8,8 +8,11 @@ endif
 "List of plugins
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
-    Plug 'arcticicestudio/nord-vim' "Theme
+    "Themes
+    Plug 'arcticicestudio/nord-vim' 
+    Plug 'morhetz/gruvbox'
     Plug 'arzg/vim-colors-xcode' "light theme
+
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
@@ -23,7 +26,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify' "start screen
+
+
     "Candy
     Plug 'ryanoasis/vim-devicons' "Icons for VIM
-    "
 call plug#end()
