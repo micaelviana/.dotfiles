@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
     "Themes
     Plug 'arcticicestudio/nord-vim' 
     Plug 'morhetz/gruvbox'
+    Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
