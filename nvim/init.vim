@@ -81,5 +81,9 @@ nnoremap <C-l> <C-w>l
 "---------------Imports
 runtime ./manager.vim
 
-colorscheme nord
+"colorscheme nord
+
+
+colorscheme gruvbox
+set background=dark
 hi Normal guibg=NONE ctermbg=NONE
