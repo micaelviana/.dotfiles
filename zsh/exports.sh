@@ -11,5 +11,4 @@ fi
 
 eval "$(zoxide init zsh)"
 
-#load asdf from aur, temporary solution
-. /opt/asdf-vm/asdf.sh
+. $HOME/.asdf/asdf.sh
