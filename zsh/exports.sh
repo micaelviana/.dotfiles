@@ -12,3 +12,10 @@ fi
 eval "$(zoxide init zsh)"
 
 . $HOME/.asdf/asdf.sh
+
+#WINDOWS PATH
+dir=$(pwd)
+windir="/mnt/c/Windows/System32"
+if [ $dir = $windir ]; then
+    cd $HOME
+fi
