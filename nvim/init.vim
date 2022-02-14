@@ -65,10 +65,6 @@ noremap! <C-h> <C-w>
 noremap x "_x
 noremap X "_x
 noremap <Del> "_x
-"Go to the beggining of the line
-nnoremap gh 0
-"Go to the end of the line
-nnoremap ge $
 "Tip(I always forget)
 "Press ^ to go to the first non white space character on the line.
 "Press g_ to go to the last non whitespace character in the line.
