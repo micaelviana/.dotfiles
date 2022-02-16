@@ -14,12 +14,13 @@ source $ZDOTDIR/aliases.sh
 #Case insensitive
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
-#Changing directories without cd
-setopt auto_cd
+#Changing directories without cd, and expand ~
+setopt auto_cd extendedglob
 #Completions
 setopt menucomplete
 zstyle ':completion:*' menu select
 zmodload zsh/complist
+_comp_options+=(globdots)		# Include hidden files.
 
 #SAVE HISTORY
 HISTSIZE=10000
