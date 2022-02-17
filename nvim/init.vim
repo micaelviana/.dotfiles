@@ -46,7 +46,8 @@ endfunction
 let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
-nnoremap <silent><leader>q :x <cr>
+nnoremap <silent><leader>q :q <cr>
+nnoremap <silent><leader>x :xa <cr>
 "select all
 nnoremap<c-a> ggVG
 "reload Vim File 
