@@ -1,5 +1,6 @@
 #Common aliases
 alias vi=nvim
+alias vid="nvim ."
 alias zshr="source ~/.zshrc"
 alias py=python3
 alias open=xdg-open
