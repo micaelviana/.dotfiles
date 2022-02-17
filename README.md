@@ -9,8 +9,7 @@ ln -s $(pwd)/.zshenv $HOME/.zshenv && ln -s $(pwd)/zsh $HOME/.config/zsh && ln -
 
 ZSH
 ```
-ln -s $(pwd)/.zshenv $HOME/.zshenv
-ln -s $(pwd)/zsh $HOME/.config/zsh
+ln -s $(pwd)/.zshenv $HOME/.zshenv && ln -s $(pwd)/zsh $HOME/.config/zsh
 ```
 
 Neovim
