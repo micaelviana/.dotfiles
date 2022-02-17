@@ -11,7 +11,7 @@ fi
 
 eval "$(zoxide init zsh)"
 
-. $HOME/.asdf/asdf.sh
+[ -f $HOME/.asdf/asdf.sh ]  && . $HOME/.asdf/asdf.sh
 
 #WINDOWS PATH
 dir=$(pwd)
