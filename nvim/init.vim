@@ -36,6 +36,22 @@ set noswapfile
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
 
 
+"-------------------CLIPBOARD, if windows
+if has('wsl')
+      let g:clipboard = {
+            \   'name': 'win32yank-wsl',
+            \   'copy': {
+            \      '+': '/usr/local/bin/win32yank.exe -i --crlf',
+            \      '*': '/usr/local/bin/win32yank.exe -i --crlf',
+            \    },
+            \   'paste': {
+            \      '+': '/usr/local/bin/win32yank.exe -o --lf',
+            \      '*': '/usr/local/bin/win32yank.exe -o --lf',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
+endif
+
 "------------------------FUNCTIONS
 function Cur()
     lcd %:p:h
@@ -87,15 +103,3 @@ colorscheme gruvbox
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 
-let g:clipboard = {
-      \   'name': 'win32yank-wsl',
-      \   'copy': {
-      \      '+': '/usr/local/bin/win32yank.exe -i --crlf',
-      \      '*': '/usr/local/bin/win32yank.exe -i --crlf',
-      \    },
-      \   'paste': {
-      \      '+': '/usr/local/bin/win32yank.exe -o --lf',
-      \      '*': '/usr/local/bin/win32yank.exe -o --lf',
-      \   },
-      \   'cache_enabled': 0,
-      \ }
