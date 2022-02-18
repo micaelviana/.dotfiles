@@ -86,3 +86,16 @@ colorscheme nord
 colorscheme gruvbox
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
+
+let g:clipboard = {
+      \   'name': 'win32yank-wsl',
+      \   'copy': {
+      \      '+': '/usr/local/bin/win32yank.exe -i --crlf',
+      \      '*': '/usr/local/bin/win32yank.exe -i --crlf',
+      \    },
+      \   'paste': {
+      \      '+': '/usr/local/bin/win32yank.exe -o --lf',
+      \      '*': '/usr/local/bin/win32yank.exe -o --lf',
+      \   },
+      \   'cache_enabled': 0,
+      \ }
