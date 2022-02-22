@@ -2,6 +2,7 @@ source $ZDOTDIR/exports.sh
 source $ZDOTDIR/plugins.sh
 source $ZDOTDIR/functions.sh
 source $ZDOTDIR/aliases.sh
+source $ZDOTDIR/os.sh
 
 # if which pacman > /dev/null;
 # then 

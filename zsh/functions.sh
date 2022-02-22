@@ -15,6 +15,7 @@ tao () {
   [ -z "$TMUX"  ] && { tmux attach || tmux new-session ;}
 }
 
+
 #make file to OpenGL code 
 # gl (){
 #   file=$1
