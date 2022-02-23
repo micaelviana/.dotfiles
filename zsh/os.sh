@@ -14,7 +14,10 @@ if grep -q "$os" <<< "$info"; then #check Windows-WSL
         powershell.exe -noprofile -command Get-Clipboard
   }
 
-elif [ -f "/etc/arch-release" ]; then
+fi
+
+#detect distro
+if [ -f "/etc/arch-release" ]; then
   aur=yay
   alias install="sudo pacman -S --needed"
   alias upgrade="sudo pacman -Syu"
