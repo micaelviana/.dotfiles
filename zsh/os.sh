@@ -14,6 +14,7 @@ if grep -q "$os" <<< "$info"; then #check Windows-WSL
         powershell.exe -noprofile -command Get-Clipboard
   }
 
+  alias notebook="jupyter notebook --no-browser"
 fi
 
 #detect distro
