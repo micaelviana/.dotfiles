@@ -17,6 +17,7 @@ zinit light zsh-users/zsh-completions
 #plugins
 zinit snippet OMZP::copyfile
 zinit snippet OMZP::copybuffer
+zinit snippet OMZP::copypath
 zinit snippet OMZP::git
 #libraries
 zinit snippet OMZL::clipboard.zsh
