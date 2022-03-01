@@ -22,4 +22,5 @@ zinit snippet OMZP::git
 #libraries
 zinit snippet OMZL::clipboard.zsh
 zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::termsupport.zsh
 ### End of Zinit's installer chunk
