@@ -97,9 +97,4 @@ nnoremap <C-l> <C-w>l
 runtime ./manager.vim
 
 colorscheme nord
-
-
-colorscheme gruvbox
-set background=dark
 hi Normal guibg=NONE ctermbg=NONE
-
