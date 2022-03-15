@@ -19,5 +19,5 @@ ln -s $(pwd)/nvim $HOME/.config/nvim
 
 Tmux
 ```
-ln -s $(pwd)/tmux $HOME/.config/tmux
+ln -s $(pwd)/.tmux.conf $HOME/.tmux.conf
 ```
