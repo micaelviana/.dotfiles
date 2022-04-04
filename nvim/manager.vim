@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'joshdick/onedark.vim'
+    Plug 'haishanh/night-owl.vim'
     Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
