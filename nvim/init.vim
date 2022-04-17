@@ -71,8 +71,8 @@ nnoremap <leader>rv :source % <cr>
 "edit  vim file in a new tab
 nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 "shortcut for switch between modes faster
-imap jj <Esc>
-imap JJ <Esc>
+" imap jj <Esc>
+" imap JJ <Esc>
 "replace selected content faster
 nnoremap <leader>r :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
