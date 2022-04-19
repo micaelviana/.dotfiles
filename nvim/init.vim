@@ -31,6 +31,12 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+#Config to vim lsp - highlight document
+let g:markdown_fenced_languages = [
+      \ 'vim',
+      \ 'help'
+      \]
+
 "---------------AUTOCOMMANDS
 "autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
