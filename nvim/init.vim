@@ -31,7 +31,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-#Config to vim lsp - highlight document
+"Config to vim lsp - highlight document
 let g:markdown_fenced_languages = [
       \ 'vim',
       \ 'help'
