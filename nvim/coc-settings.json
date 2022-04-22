@@ -1,3 +1,31 @@
 {
-    "suggest.noselect": false
+    "suggest.noselect": false,
+    "suggest.completionItemKindLabels": {
+        "method": "  ",
+        "function": "  ",
+        "variable": " [] ",
+        "field": "  ",
+        "typeParameter": " <T> ",
+        "constant": "  ",
+        "class": " פּ ",
+        "interface": "  ",
+        "struct": "歷",
+        "event": "  ",
+        "operator": " ",
+        "module": "  ",
+        "property": "  ",
+        "enum": "  ",
+        "reference": "  ",
+        "keyword": "  ",
+        "file": "  ",
+        "folder": "  ",
+        "color": "  ",
+        "unit": " 塞 ",
+        "snippet": "  ",
+        "text": "  ",
+        "constructor": "  ",
+        "value": "  ",
+        "enumMember": "  ",
+        "default": "  "
+    }
 }
