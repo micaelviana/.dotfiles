@@ -1,10 +1,10 @@
 {
     "suggest.noselect": false,
     "suggest.completionItemKindLabels": {
-        "method": "  ",
-        "function": "  ",
+        "method": "  ",
+        "function": "  ",
         "variable": " [] ",
-        "field": "  ",
+        "field": " ﴲ ",
         "typeParameter": " <T> ",
         "constant": "  ",
         "class": " פּ ",
