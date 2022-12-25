@@ -29,6 +29,9 @@ if [ -f "/etc/arch-release" ]; then
   alias auri="$aur -S"
   alias aurs="$aur -Ss"
   alias aurl="pacman -Qm"
+  
+  
+  alias py=python
 else
 # assume ubuntu based
   alias apti="sudo apt install"
@@ -36,4 +39,6 @@ else
   alias aptug="sudo apt upgrade"
   alias apts="apt search"
   alias apt_cleanup="sudo apt autoremove"
+  
+  alias py=python3
 fi
