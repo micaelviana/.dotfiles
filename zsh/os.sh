@@ -20,21 +20,20 @@ fi
 #detect distro
 if [ -f "/etc/arch-release" ]; then
   aur=yay
-  alias install="sudo pacman -S --needed"
-  alias upgrade="sudo pacman -Syu"
-  alias update="upgrade"
-  alias search="pacman -Ss"
-  alias unlock="sudo rm /var/lib/pacman/db.lck"
-  alias cleanup="sudo pacman -Rs $(pacman -Qtdq)"
-  alias aurup="$aur -Sua"
-  alias aurin="$aur -S"
-  alias aurse="$aur -Ss"
+  alias paci="sudo pacman -S --needed"
+  alias pacu="sudo pacman -Syu"
+  alias pacs="pacman -Ss"
+  alias pac_unlock="sudo rm /var/lib/pacman/db.lck"
+  alias pac_cleanup="sudo pacman -Rs $(pacman -Qtdq)"
+  alias auru="$aur -Sua"
+  alias auri="$aur -S"
+  alias aurs="$aur -Ss"
   alias aurl="pacman -Qm"
 else
 # assume ubuntu based
-  alias install="sudo apt install"
-  alias update="sudo apt update"
-  alias upgrade="sudo apt upgrade"
-  alias search="apt search"
-  alias cleanup="sudo apt autoremove"
+  alias apti="sudo apt install"
+  alias aptud="sudo apt update"
+  alias aptug="sudo apt upgrade"
+  alias apts="apt search"
+  alias apt_cleanup="sudo apt autoremove"
 fi
