@@ -3,10 +3,9 @@
 mkcd() {
     dir=$1
     if [ -d $dir ]; then
-        echo "Directory already exists"
-    else
-        mkdir $dir
         cd $dir
+    else
+        mkdir $dir && cd $dir
     fi
 }
 
