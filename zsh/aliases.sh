@@ -2,7 +2,6 @@
 alias vi=nvim
 alias vid="nvim ."
 alias zshr="source $HOME/.config/zsh/.zshrc"
-alias py=python3
 alias open=xdg-open
 #lsd aliases
 alias ls='lsd'
