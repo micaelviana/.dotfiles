@@ -38,7 +38,9 @@ else
   alias aptud="sudo nala update"
   alias aptug="sudo nala upgrade"
   alias apts="nala search"
-  alias apt_cleanup="sudo nala purge"
+  alias aptr="sudo nala purge"
+
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   
   alias py=python3
 fi

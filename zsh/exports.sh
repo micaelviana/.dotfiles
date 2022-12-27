@@ -11,8 +11,3 @@ eval "$(zoxide init zsh)"
 
 [ -f $HOME/.asdf/asdf.sh ]  && . $HOME/.asdf/asdf.sh
 
-if [ -f "$HOME/.profile" ]; 
-then
-	source $HOME/.profile
-  #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi

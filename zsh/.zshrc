@@ -51,8 +51,6 @@ SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_DIR_TRUNC=3
 SPACESHIP_DIR_TRUNC_REPO=true
 
-#FZF needs to be the last
-source $ZDOTDIR/fzf.sh
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -67,3 +65,7 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
+
+
+#FZF needs to be the last
+source $ZDOTDIR/fzf.sh
