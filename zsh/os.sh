@@ -46,4 +46,6 @@ else
   [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
   
   alias py=python3
+  alias bat=batcat
+  alias fd=fdfind
 fi
