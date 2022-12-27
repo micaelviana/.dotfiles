@@ -11,7 +11,8 @@ eval "$(zoxide init zsh)"
 
 [ -f $HOME/.asdf/asdf.sh ]  && . $HOME/.asdf/asdf.sh
 
-if [ grep Ubuntu /etc/os-release &> /dev/null ]; 
+if [ -f "$HOME/.profile" ]; 
 then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	source $HOME/.profile
+  #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
