@@ -41,6 +41,9 @@ else
   alias aptr="sudo nala purge"
 
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+  [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+  [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
   
   alias py=python3
 fi
