@@ -66,6 +66,4 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
-
-#FZF needs to be the last
 source $ZDOTDIR/fzf.sh
