@@ -34,11 +34,11 @@ if [ -f "/etc/arch-release" ]; then
   alias py=python
 else
 # assume ubuntu based
-  alias apti="sudo apt install"
-  alias aptud="sudo apt update"
-  alias aptug="sudo apt upgrade"
-  alias apts="apt search"
-  alias apt_cleanup="sudo apt autoremove"
+  alias apti="sudo nala install"
+  alias aptud="sudo nala update"
+  alias aptug="sudo nala upgrade"
+  alias apts="nala search"
+  alias apt_cleanup="sudo nala purge"
   
   alias py=python3
 fi

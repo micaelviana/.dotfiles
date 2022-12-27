@@ -9,6 +9,6 @@ alias l='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 
-alias zii="__zoxide_zi"
+alias si="__zoxide_zi"
 
 alias gcom="git commit -m"

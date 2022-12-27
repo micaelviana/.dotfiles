@@ -27,5 +27,6 @@
         "value": "  ",
         "enumMember": "  ",
         "default": "  "
-    }
+    },
+    "snippets.ultisnips.pythonPrompt": false
 }
