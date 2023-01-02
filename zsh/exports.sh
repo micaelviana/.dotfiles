@@ -8,6 +8,7 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 eval "$(zoxide init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 [ -f $HOME/.asdf/asdf.sh ]  && . $HOME/.asdf/asdf.sh
 

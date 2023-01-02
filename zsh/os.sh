@@ -23,11 +23,13 @@ if [ -f "/etc/arch-release" ]; then
   alias paci="sudo pacman -S --needed"
   alias pacu="sudo pacman -Syu"
   alias pacs="pacman -Ss"
+  alias pacr="pacman -Rns"
   alias pac_unlock="sudo rm /var/lib/pacman/db.lck"
   alias pac_cleanup="sudo pacman -Rs $(pacman -Qtdq)"
   alias auru="$aur -Sua"
   alias auri="$aur -S"
   alias aurs="$aur -Ss"
+  alias aurr="$aur -Rns"
   alias aurl="pacman -Qm"
   
   
