@@ -4,13 +4,6 @@ source $ZDOTDIR/functions.sh
 source $ZDOTDIR/aliases.sh
 source $ZDOTDIR/os.sh
 
-# if which pacman > /dev/null;
-# then 
-#   source $ZDOTDIR/arch.sh
-# else
-#   source $ZDOTDIR/ubuntu.sh
-# fi
-
 #ZSH OPTIONS
 #Case insensitive
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
@@ -46,7 +39,7 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_SUFIXES_SHOW=false
-SPACESHIP_DIR_TRUNC=3
+SPACESHIP_DIR_TRUNC=7
 SPACESHIP_DIR_TRUNC_REPO=true
 
 ### Added by Zinit's installer
