@@ -28,5 +28,13 @@
         "enumMember": "  ",
         "default": "  "
     },
-    "snippets.ultisnips.pythonPrompt": false
+    "snippets.ultisnips.pythonPrompt": false,
+    "languageserver": {
+        "bash": {
+          "command": "bash-language-server",
+          "args": ["start"],
+          "filetypes": ["sh"],
+          "ignoredRootPaths": ["~"]
+        }
+      }
 }
