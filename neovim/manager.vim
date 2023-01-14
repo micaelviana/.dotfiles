@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'haishanh/night-owl.vim'
     Plug 'arzg/vim-colors-xcode' "light theme
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'preservim/nerdtree' "Sidebar

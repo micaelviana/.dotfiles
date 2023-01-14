@@ -1,5 +1,5 @@
   let g:lightline = {
-	\ 'colorscheme': 'nord',
+	\ 'colorscheme': 'tokyonight',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
