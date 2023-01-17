@@ -18,8 +18,8 @@ zmodload zsh/complist
 #_comp_options+=(globdots)		# Include hidden files.
 
 #SAVE HISTORY
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
