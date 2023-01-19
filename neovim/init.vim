@@ -72,7 +72,7 @@ nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :q <cr>
 nnoremap <silent><leader>x :xa <cr>
 "select all
-nnoremap<c-a> ggVG
+nnoremap<c-t> ggVG
 "reload Vim File 
 nnoremap <leader>rv :source % <cr>
 "edit  vim file in a new tab

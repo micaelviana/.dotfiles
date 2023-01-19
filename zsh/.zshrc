@@ -1,10 +1,49 @@
-source $ZDOTDIR/exports.sh
-source $ZDOTDIR/plugins.sh
-source $ZDOTDIR/functions.sh
-source $ZDOTDIR/aliases.sh
-source $ZDOTDIR/os.sh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-#ZSH OPTIONS
+#{{Plugin Manager}}
+### Added by Zinit's installer
+
+# if [[ ! -f "$HOME/.local/share/zinit/zinit.git/zinit.zsh" ]]; then
+#     sh -c "$(curl -fsSL https://git.io/zinit-install)"
+# fi
+
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+
+#some OHMYZSH tools that are useful
+#plugins
+zinit snippet OMZP::copyfile
+zinit snippet OMZP::copybuffer
+zinit snippet OMZP::copypath
+zinit snippet OMZP::git
+#libraries
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::termsupport.zsh
+### End of Zinit's installer chunk
+
+
+#{{General Options}}
 #Case insensitive
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
@@ -23,36 +62,50 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
+#Fix WSL Clipboard
+info=$(uname -a)
+os="WSL"
 
-# THEME
-ZSH_THEME="spaceship"
-SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_PROMPT_ADD_NEWLINE=true
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_DIR_TRUNC=7
-SPACESHIP_DIR_TRUNC_REPO=true
-
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
+#detect specific os
+if grep -q "$os" <<< "$info"; then #check Windows-WSL
+  #redefine clipcopy
+  clipcopy () {
+        clip.exe < "${1:-/dev/stdin}"
+  }
+  #redefine clippaste
+  clippaste () {
+        powershell.exe -noprofile -command Get-Clipboard
+  }
 fi
 
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
 
-source $ZDOTDIR/fzf.sh
+#{{FZF}}
+#FZF needs to be the last to work properly
+# Using highlight (http://www.andre-simon.de/doku/highlight/en/highlight.html)
+export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
+#source some files to better funcionality
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Directly executing the command (CTRL-X CTRL-R)
+fzf-history-widget-accept() {
+  fzf-history-widget
+  zle accept-line
+}
+zle     -N     fzf-history-widget-accept
+bindkey '^X^R' fzf-history-widget-accept
+
+
+#{{Sources}}
+source $ZDOTDIR/aliases.sh
+source $ZDOTDIR/funcs.sh
+source $ZDOTDIR/exports.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

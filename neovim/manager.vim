@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify' "start screen
+    Plug 'christoomey/vim-tmux-navigator'
 
 
 
