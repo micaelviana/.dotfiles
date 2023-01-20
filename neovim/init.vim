@@ -31,12 +31,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-"Config to vim lsp - highlight document
-let g:markdown_fenced_languages = [
-      \ 'vim',
-      \ 'help'
-      \]
-
 "---------------AUTOCOMMANDS
 "autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
@@ -71,17 +65,16 @@ nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :q <cr>
 nnoremap <silent><leader>x :xa <cr>
+nnoremap <silent> \w :w <cr>
+nnoremap <silent> \q :q <cr>
+nnoremap <silent> \z :xa <cr>
+"go to normal mode
+nnoremap s :
 "select all
-nnoremap<c-t> ggVG
-"reload Vim File 
-nnoremap <leader>rv :source % <cr>
-"edit  vim file in a new tab
-nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
-"shortcut for switch between modes faster
-" imap jj <Esc>
-" imap JJ <Esc>
+nnoremap<c-a> ggVG
 "replace selected content faster
-nnoremap <leader>r :%s///g<Left><Left>
+" nnoremap <leader>r :%s///g<Left><Left>
+nnoremap _ :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -95,12 +88,6 @@ noremap <Del> "_x
 "keymap to call the Cur() function
 nnoremap<space>z :call Cur()<cr>
 
-
-"Better split navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 "---------------Imports
 runtime ./manager.vim
