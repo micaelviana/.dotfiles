@@ -70,18 +70,18 @@ set noswapfile
 
 "-------------------CLIPBOARD, if windows
 "detect WSL is harder in VIM than in Neovim, so we use this function
-let value=2
+let isWSL=2
 let uname = substitute(system('uname'),'\n','','')
 if uname == 'Linux'
     let lines = readfile("/proc/version")
     if lines[0] =~ "Microsoft"
-        let value = 1
+        let isWSL = 1
     else
-        let value = 0
+        let isWSL = 0
     endif
 endif
 
-if value == 1
+if isWSL == 1
       let g:clipboard = {
             \   'name': 'win32yank-wsl',
             \   'copy': {
