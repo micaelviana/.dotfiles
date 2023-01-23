@@ -33,9 +33,10 @@ set noswapfile
 
 "---------------AUTOCOMMANDS
 "autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
-autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
-
-
+"Open images from VIM on Linux
+autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw 
+"Restore cursor shape after leaving Neovim
+autocmd VimLeave * set guicursor=a:ver30-blinkoff300
 "-------------------CLIPBOARD, if windows
 if has('wsl')
       let g:clipboard = {
@@ -73,7 +74,6 @@ nnoremap s :
 "select all
 nnoremap<c-a> ggVG
 "replace selected content faster
-" nnoremap <leader>r :%s///g<Left><Left>
 nnoremap _ :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>

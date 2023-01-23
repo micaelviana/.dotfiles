@@ -1,4 +1,3 @@
-set noshowmode
   let g:lightline = {
 	\ 'colorscheme': 'tokyonight',
 	\ 'active': {
