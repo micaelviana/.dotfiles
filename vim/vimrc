@@ -68,6 +68,18 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+
+"---------------AUTOCOMMANDS
+"autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
+"Open images from VIM on Linux
+augroup OpenImages
+      autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw 
+augroup END
+"Restore cursor shape after leaving Neovim
+augroup GuiCursor
+      autocmd VimLeave * set guicursor=a:ver30-blinkoff300
+augroup END
+
 "-------------------CLIPBOARD, if windows
 "detect WSL is harder in VIM than in Neovim, so we use this function
 let isWSL=2
@@ -97,7 +109,7 @@ if isWSL == 1
 endif
 
 "------------------------FUNCTIONS
-function Cur()
+function Current()
     lcd %:p:h
 endfunction
 
@@ -110,8 +122,11 @@ nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :q <cr>
 nnoremap <silent><leader>x :xa <cr>
 nnoremap <silent> \w :w <cr>
+nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :q <cr>
-nnoremap <silent> \z :xa <cr>
+nnoremap <silent> \Q :q <cr>
+nnoremap <silent> \z :wqa <cr>
+nnoremap <silent> \Z :wqa <cr>
 "go to normal mode
 nnoremap s :
 "select all
