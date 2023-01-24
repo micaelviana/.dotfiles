@@ -102,7 +102,7 @@ function Cur()
     lcd %:p:h
 endfunction
 
-"----------KEYMAPPINGS----------
+"----------KEYMAPS----------
 "set mapleader
 let mapleader = " "
 "save and close
@@ -116,6 +116,8 @@ nnoremap <silent> \q :q <cr>
 nnoremap <silent> \Q :q <cr>
 nnoremap <silent> \z :wqa <cr>
 nnoremap <silent> \Z :wqa <cr>
+"paste in insert mode using Ctrl+V
+inoremap<c-v> <esc>pi
 "go to normal mode
 nnoremap s :
 "select all
