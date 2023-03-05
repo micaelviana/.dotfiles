@@ -75,7 +75,7 @@ set nobackup nowritebackup noswapfile
 "autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 "Open images from VIM on Linux
 augroup OpenImages
-      autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw 
+      autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
 "Restore cursor shape after leaving Neovim
 augroup GuiCursor
