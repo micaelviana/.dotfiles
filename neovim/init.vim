@@ -121,7 +121,7 @@ inoremap<c-v> <esc>pi
 "go to normal mode
 nnoremap s :
 "select all
-nnoremap<c-a> ggVG
+nnoremap \a ggVG
 "replace selected content faster
 nnoremap _ :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
