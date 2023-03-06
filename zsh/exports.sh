@@ -2,7 +2,6 @@
 #EXPORTS
 export EDITOR=nvim
 export SUDO_EDITOR=nvim
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
