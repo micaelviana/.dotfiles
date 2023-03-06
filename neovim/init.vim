@@ -120,6 +120,7 @@ nnoremap <silent> \Z :wqa <cr>
 inoremap<c-v> <esc>pi
 "go to normal mode
 nnoremap s :
+vnoremap s :
 "select all
 nnoremap \a ggVG
 "replace selected content faster
