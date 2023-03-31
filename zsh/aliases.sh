@@ -4,6 +4,7 @@ alias vi=nvim
 alias vid="nvim ."
 alias cl=clear
 alias py=python
+alias g=git
 #lsd aliases
 alias ls='lsd'
 alias l='lsd -l'
