@@ -142,4 +142,4 @@ noremap <Del> "_x
 nnoremap<space>z :call Cur()<cr>
 
 
-colorscheme tokyonight-storm
+colorscheme nord
