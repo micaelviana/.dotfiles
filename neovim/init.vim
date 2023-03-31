@@ -123,6 +123,9 @@ nnoremap s :
 vnoremap s :
 "select all
 nnoremap \a ggVG
+"increment/decrement
+nnoremap + <c-a>
+nnoremap - <c-x>
 "replace selected content faster
 nnoremap _ :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
