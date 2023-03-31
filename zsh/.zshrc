@@ -35,7 +35,6 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit snippet OMZP::copyfile
 zinit snippet OMZP::copybuffer
 zinit snippet OMZP::copypath
-zinit snippet OMZP::git
 #libraries
 zinit snippet OMZL::clipboard.zsh
 zinit snippet OMZL::key-bindings.zsh
