@@ -5,37 +5,34 @@ alias vid="nvim ."
 alias cl=clear
 alias py=python
 alias g=git
+alias gcom="git commit -m"
 #lsd aliases
 alias ls='lsd'
 alias l='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 
-alias zii="__zoxide_zi"
-
-alias gcom="git commit -m"
 
 #detect distro
 if [ -f "/etc/arch-release" ]; then
-  aur=yay
-  alias paci="sudo pacman -S --needed"
-  alias pacu="sudo pacman -Syu"
-  alias pacs="pacman -Ss"
-  alias pacr="sudo pacman -Rns"
-  alias pac_unlock="sudo rm /var/lib/pacman/db.lck"
-  alias pac_cleanup='sudo pacman -Rs "$(pacman -Qtdq)"'
-  alias auru='"$aur" -Sua'
-  alias auri='"$aur" -S'
-  alias aurs='"$aur" -Ss'
-  alias aurr='"$aur" -Rns'
-  alias aurl="pacman -Qm"
+  alias pacinstall="sudo pacman -S --needed"
+  alias pacupdate="sudo pacman -Syu"
+  alias pacsearch="pacman -Ss"
+  alias pacuninstall="sudo pacman -Rns"
+  alias pacunlock="sudo rm /var/lib/pacman/db.lck"
+  alias paccleanup='sudo pacman -Rs "$(pacman -Qtdq)"'
+  alias aurupdate='yay -Sua'
+  alias aurinstall='yay -S'
+  alias aursearch='yay -Ss'
+  alias auruninstall='yay -Rns'
+  alias aurlist="pacman -Qm"
 else
 # assume ubuntu based
-  alias apti="sudo nala install"
-  alias aptud="sudo nala update"
-  alias aptug="sudo nala upgrade"
-  alias apts="nala search"
-  alias aptr="sudo nala purge"
+  alias aptinstall="sudo nala install"
+  alias aptupdate="sudo nala update"
+  alias aptupgrade="sudo nala upgrade"
+  alias aptsearch="nala search"
+  alias aptuninstall="sudo nala purge"
 
   alias bat=batcat
   alias fd=fdfind

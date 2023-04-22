@@ -6,12 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #{{Plugin Manager}}
-### Added by Zinit's installer
-
-# if [[ ! -f "$HOME/.local/share/zinit/zinit.git/zinit.zsh" ]]; then
-#     sh -c "$(curl -fsSL https://git.io/zinit-install)"
-# fi
-
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
     command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
@@ -27,6 +21,7 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+# zinit light zap-zsh/completions
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
@@ -38,7 +33,8 @@ zinit snippet OMZP::copypath
 #libraries
 zinit snippet OMZL::clipboard.zsh
 zinit snippet OMZL::key-bindings.zsh
-zinit snippet OMZL::termsupport.zsh
+# zinit snippet OMZL::termsupport.zsh
+# zinit snippet OMZL::completion.zsh
 ### End of Zinit's installer chunk
 
 
@@ -53,11 +49,11 @@ setopt auto_cd
 setopt menucomplete
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-#_comp_options+=(globdots)		# Include hidden files.
+_comp_options+=(globdots)		# Include hidden files.
 
 #SAVE HISTORY
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
@@ -80,16 +76,11 @@ fi
 
 #{{FZF}}
 #FZF needs to be the last to work properly
-# Using highlight (http://www.andre-simon.de/doku/highlight/en/highlight.html)
-# export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
-# export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
-# export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
-#source some files to better funcionality
+# source some files to better funcionality
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -103,7 +94,6 @@ fzf-history-widget-accept() {
 }
 zle     -N     fzf-history-widget-accept
 bindkey '^X^R' fzf-history-widget-accept
-
 
 #{{Sources}}
 source $ZDOTDIR/aliases.sh
