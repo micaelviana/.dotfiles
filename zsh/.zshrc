@@ -21,7 +21,7 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-# zinit light zap-zsh/completions
+zinit light zap-zsh/completions
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
