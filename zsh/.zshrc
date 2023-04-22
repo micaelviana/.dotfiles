@@ -106,5 +106,6 @@ source $ZDOTDIR/aliases.sh
 source $ZDOTDIR/funcs.sh
 source $ZDOTDIR/exports.sh
 
+
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
