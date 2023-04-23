@@ -21,7 +21,6 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-zinit light zap-zsh/completions
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
@@ -33,8 +32,7 @@ zinit snippet OMZP::copypath
 #libraries
 zinit snippet OMZL::clipboard.zsh
 zinit snippet OMZL::key-bindings.zsh
-# zinit snippet OMZL::termsupport.zsh
-# zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::termsupport.zsh
 ### End of Zinit's installer chunk
 
 
