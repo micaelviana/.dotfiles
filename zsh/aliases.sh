@@ -5,7 +5,7 @@ alias vid="nvim ."
 alias cl=clear
 alias py=python
 alias g=git
-alias gcom="git commit -m"
+alias gc="git commit -m"
 #lsd aliases
 alias ls='lsd'
 alias l='lsd -l'
