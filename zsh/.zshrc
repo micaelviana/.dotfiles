@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #Plugins
-plugins=(copyfile copybuffer copypath zsh-autosuggestions fast-syntax-highlighting completions zsh-autopair)
+plugins=(copyfile copybuffer copypath fzf zsh-autosuggestions fast-syntax-highlighting completions zsh-autopair)
 
 #detect specific os
 if grep -q "$os" <<< "$info"; then #check Windows-WSL
