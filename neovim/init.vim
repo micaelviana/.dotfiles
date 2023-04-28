@@ -106,15 +106,15 @@ let mapleader = " "
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :q <cr>
-nnoremap <silent><leader>x :xa <cr>
+nnoremap <silent><leader>z :xa <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :q <cr>
 nnoremap <silent> \Q :q <cr>
-nnoremap <silent> \z :wqa <cr>
-nnoremap <silent> \Z :wqa <cr>
+nnoremap <silent> \z :xa <cr>
+nnoremap <silent> \Z :xa <cr>
 "paste in insert mode using Ctrl+V
-inoremap<c-v> <esc>pi
+inoremap<c-v> <esc>pa
 "go to normal mode
 nnoremap s :
 vnoremap s :
