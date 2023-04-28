@@ -6,6 +6,7 @@ alias cl=clear
 alias py=python
 alias g=git
 alias gc="git commit -m"
+alias gs="git status"
 #lsd aliases
 alias ls='lsd'
 alias l='lsd -l'

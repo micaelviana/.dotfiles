@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
+    Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
@@ -26,8 +27,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips' "Create new snippets
     Plug 'honza/vim-snippets' "Collection of snippets for various languages
     Plug 'unblevable/quick-scope' "moving horizontally
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
-    Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify' "start screen
     Plug 'christoomey/vim-tmux-navigator'
 
