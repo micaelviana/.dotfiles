@@ -1,4 +1,4 @@
-  let g:lightline = {
+let g:lightline = {
 	\ 'colorscheme': 'nordfox',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
@@ -8,3 +8,5 @@
 	\   'cocstatus': 'coc#status'
 	\ },
 	\ }
+  
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
