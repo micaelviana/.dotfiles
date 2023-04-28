@@ -10,6 +10,7 @@ endif
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
     "Themes
+    Plug 'EdenEast/nightfox.nvim'
     Plug 'arcticicestudio/nord-vim' 
     Plug 'morhetz/gruvbox'
     Plug 'haishanh/night-owl.vim'
@@ -139,4 +140,4 @@ noremap <Del> "_x
 nnoremap<space>z :call Cur()<cr>
 
 
-colorscheme nord
+colorscheme nordfox
