@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'haishanh/night-owl.vim'
     Plug 'arzg/vim-colors-xcode' "light theme
 
-
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'AckslD/nvim-neoclip.lua'
