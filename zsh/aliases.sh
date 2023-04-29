@@ -2,10 +2,13 @@
 #Common aliases
 alias vi=nvim
 alias vid="nvim ."
-alias cl=clear
-alias py=python
-alias g=git
+alias cl="clear"
+alias py="python"
+alias g="git"
 alias gc="git commit -m"
+alias gau="git add -u"
+alias gp="git push"
+alias gpl="git pull"
 alias gs="git status"
 #lsd aliases
 alias ls='lsd'
