@@ -71,7 +71,6 @@ endif
 set nobackup nowritebackup noswapfile
 
 "---------------AUTOCOMMANDS
-"autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 "Open images from VIM on Linux
 augroup OpenImages
       autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
@@ -95,11 +94,6 @@ if has('wsl')
             \   'cache_enabled': 0,
             \ }
 endif
-
-"------------------------FUNCTIONS
-function Cur()
-    lcd %:p:h
-endfunction
 
 "----------KEYMAPS----------
 "set mapleader
@@ -138,7 +132,8 @@ noremap <Del> "_x
 "Tip(I always forget)
 "Press ^ to go to the first non white space character on the line.
 "Press g_ to go to the last non whitespace character in the line.
-"keymap to call the Cur() function
-nnoremap<space>z :call Cur()<cr>
+"command to change the working directory to the directory of the current file
+command! Current lcd %:p:h 
+nnoremap<space>z :Current <cr>
 
 colorscheme nordfox
