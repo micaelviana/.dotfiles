@@ -37,6 +37,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
 
+
+#some lua  plugins need to be called to work
+lua require('Comment').setup()
+lua require('neoclip').setup()
+
 "----------END (PLUGIN MANAGER)
 
 "----------GENERAL----------
