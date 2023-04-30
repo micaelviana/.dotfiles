@@ -38,7 +38,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 
-#some lua  plugins need to be called to work
+"some lua  plugins need to be called to work
 lua require('Comment').setup()
 lua require('neoclip').setup()
 
