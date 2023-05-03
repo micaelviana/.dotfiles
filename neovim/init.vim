@@ -6,6 +6,11 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 "List of plugins
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
@@ -14,6 +19,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim' 
     Plug 'morhetz/gruvbox'
     Plug 'haishanh/night-owl.vim'
+    Plug 'rose-pine/neovim', {'as': 'rose-pine'}
     Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
