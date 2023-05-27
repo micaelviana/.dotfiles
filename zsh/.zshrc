@@ -10,7 +10,14 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #Plugins
-plugins=(copybuffer fzf zsh-autosuggestions fast-syntax-highlighting completions)
+plugins=(
+    copyfile 
+    copybuffer 
+    fzf 
+    zsh-autosuggestions 
+    fast-syntax-highlighting 
+    completions
+)
 
 #Sources oh-my-zsh config file
 source $ZSH/oh-my-zsh.sh
