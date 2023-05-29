@@ -15,9 +15,6 @@ function tao () {
   [ -z "$TMUX"  ] && { tmux attach || tmux new-session ;}
 }
 
-function gc { 
-    git commit -m "$@"; 
-}
 
 function add_oh_my_zsh_plugin() {
     # check if the URL is provided

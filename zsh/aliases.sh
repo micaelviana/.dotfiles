@@ -9,6 +9,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
 alias g="git"
 alias gau="git add -u"
+alias gc="git commit -m"
 alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
