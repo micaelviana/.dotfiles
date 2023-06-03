@@ -90,21 +90,22 @@ augroup END
 augroup GuiCursor
       autocmd VimLeave * set guicursor=a:ver30-blinkoff300
 augroup END
-"-------------------CLIPBOARD, if windows
+"-------------------CLIPBOARD, if Windows
 if has('wsl')
-      let g:clipboard = {
-            \   'name': 'win32yank-wsl',
-            \   'copy': {
-            \      '+': '/usr/local/bin/win32yank.exe -i --crlf',
-            \      '*': '/usr/local/bin/win32yank.exe -i --crlf',
-            \    },
-            \   'paste': {
-            \      '+': '/usr/local/bin/win32yank.exe -o --lf',
-            \      '*': '/usr/local/bin/win32yank.exe -o --lf',
-            \   },
-            \   'cache_enabled': 0,
-            \ }
+    let g:clipboard = {
+    \   'name': 'WslClipboard',
+    \   'copy': {
+    \      '+': 'clip.exe',
+    \      '*': 'clip.exe',
+    \    },
+    \   'paste': {
+    \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    \   },
+    \   'cache_enabled': 0,
+    \ }
 endif
+
 
 "----------KEYMAPS----------
 "set mapleader
