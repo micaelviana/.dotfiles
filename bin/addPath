@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+if [[ "$PATH" != *"$1"* ]]; then
+    echo "export PATH=$PATH:$1" >> /tmp/environment
+fi
