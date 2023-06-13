@@ -15,20 +15,17 @@ plugins=(
     copybuffer 
     fzf 
     zsh-autosuggestions 
-    fast-syntax-highlighting 
+    zsh-syntax-highlighting
     completions
 )
 
 #Sources oh-my-zsh config file
 source $ZSH/oh-my-zsh.sh
 
-#{{Sources}}
-source $HOME/.config/zsh/aliases.sh
-source $HOME/.config/zsh/exports.sh
-source $HOME/.config/zsh/funcs.sh
+#Aliases
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.local/share/dotfiles/zsh/.p10k.zsh.
-[[ ! -f ~/.local/share/dotfiles/zsh/.p10k.zsh ]] || source ~/.local/share/dotfiles/zsh/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
