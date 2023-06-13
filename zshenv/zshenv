@@ -1,1 +1,7 @@
-export ZDOTDIR=$HOME/.config/zsh
+#!/usr/bin/env sh
+#EXPORTS
+eval "$(zoxide init zsh)"
+eval "$(fnm env --use-on-cd)"
+export EDITOR=nvim
+export SUDO_EDITOR=nvim
+export PATH="$HOME/.local/bin:$PATH"
