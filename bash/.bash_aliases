@@ -13,7 +13,6 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
-alias zii="__zoxide_zi"
 #lsd aliases
 alias ls='lsd'
 alias l='lsd -l'
