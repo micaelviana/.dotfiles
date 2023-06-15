@@ -111,8 +111,7 @@ let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
-nnoremap <silent><leader>q :q <cr>
-nnoremap <silent><leader>z :xa <cr>
+nnoremap <silent><leader>q :wq <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :q <cr>
@@ -146,4 +145,4 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
-colorscheme rose-pine
+colorscheme rose-pine-moon
