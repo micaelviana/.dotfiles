@@ -146,4 +146,4 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
-colorscheme nordfox
+colorscheme rose-pine
