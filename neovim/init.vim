@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
-    Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-sensible' "tpope
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
@@ -39,13 +39,12 @@ call plug#begin('~/.vim/plugged')
 
 
     "Candy
-    Plug 'ryanoasis/vim-devicons' "Icons for VIM
+    Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
 
 
 "some lua  plugins need to be called to work
 lua require('Comment').setup()
-lua require('neoclip').setup()
 
 "----------END (PLUGIN MANAGER)
 
