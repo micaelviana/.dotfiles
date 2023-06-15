@@ -34,8 +34,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'unblevable/quick-scope' "moving horizontally
     Plug 'mhinz/vim-startify' "start screen
     Plug 'christoomey/vim-tmux-navigator'
-
-
     "Candy
     Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
@@ -91,7 +89,7 @@ function TurnLight ()
     set background=light
 endfunction
 
-"-------------------CLIPBOARD, if Windows
+"-------------------CLIPBOARD, if WSL
 if has('wsl')
     let g:clipboard = {
     \   'name': 'WslClipboard',
