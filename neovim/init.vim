@@ -20,7 +20,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
     Plug 'itchyny/lightline.vim' "statusline
-    Plug 'LunarWatcher/auto-pairs'
+    Plug 'LunarWatcher/auto-pairs' "autopairs
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'tpope/vim-sensible' "tpope
     Plug 'preservim/nerdtree' "Sidebar
