@@ -25,7 +25,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'tpope/vim-sensible'
-    Plug 'kkharji/sqlite.lua'
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
