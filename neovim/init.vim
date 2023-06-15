@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
+    Plug 'tpope/vim-sensible'
     Plug 'AckslD/nvim-neoclip.lua'
     Plug 'kkharji/sqlite.lua'
     Plug 'preservim/nerdtree' "Sidebar
