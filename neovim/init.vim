@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
     Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
-    Plug 'numToStr/Comment.nvim' "comment plugin for neovim.
+    Plug 'tpope/vim-commentary' "Comment stuff out
     Plug 'haya14busa/is.vim' "is.vim - incremental search improved
     Plug 'SirVer/ultisnips' "Create new snippets
     Plug 'honza/vim-snippets' "Collection of snippets for various languages
@@ -41,10 +41,6 @@ call plug#begin('~/.vim/plugged')
     "Candy
     Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
-
-
-"some lua  plugins need to be called to work
-lua require('Comment').setup()
 
 "----------END (PLUGIN MANAGER)
 
@@ -88,6 +84,13 @@ augroup END
 augroup GuiCursor
       autocmd VimLeave * set guicursor=a:ver30-blinkoff300
 augroup END
+
+"----------------Functions
+function TurnLight () 
+    colorscheme rose-pine-dawn
+    set background=light
+endfunction
+
 "-------------------CLIPBOARD, if Windows
 if has('wsl')
     let g:clipboard = {
