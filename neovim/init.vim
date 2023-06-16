@@ -18,7 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-    Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+    Plug 'folke/tokyonight.nvim'
 
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'LunarWatcher/auto-pairs' "autopairs
@@ -147,4 +147,4 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
-colorscheme catppuccin-macchiato
+colorscheme tokyonight
