@@ -21,7 +21,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'folke/tokyonight.nvim'
 
     Plug 'itchyny/lightline.vim' "statusline
-    Plug 'LunarWatcher/auto-pairs' "autopairs
+    Plug 'windwp/nvim-autopairs'"autopairs
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'tpope/vim-sensible' "tpope
     Plug 'preservim/nerdtree' "Sidebar
@@ -86,7 +86,7 @@ au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeou
 
 "----------------Functions
 function TurnLight () 
-    colorscheme rose-pine-dawn
+    colorscheme tokyonight-day
     set background=light
 endfunction
 
@@ -114,6 +114,7 @@ let mapleader = " "
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :wq <cr>
+nnoremap <silent><leader>Q :wq <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :q <cr>
