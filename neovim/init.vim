@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
     "Themes
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
     Plug 'itchyny/lightline.vim' "statusline
@@ -146,4 +147,4 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
-colorscheme rose-pine-moon
+colorscheme catppuccin-macchiato
