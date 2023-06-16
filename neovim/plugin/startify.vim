@@ -8,3 +8,4 @@ let g:startify_custom_header = [
 	\ '    ░█░█░█░░█░░█░░█▀░░░█▀░█░░█▀▀░▀▀▄   ',
 	\ '    ░▀▀░░░▀▀░░░▀░░▀░░░▀▀▀░▀▀░▀▀▀░▀▀▀   ']
 
+nnoremap <c-s> :Startify <cr>
