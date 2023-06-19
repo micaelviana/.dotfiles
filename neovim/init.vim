@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'tpope/vim-sensible' "tpope
     Plug 'preservim/nerdtree' "Sidebar
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "treesitter
+    Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
     Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
     Plug 'tpope/vim-commentary' "Comment stuff out
