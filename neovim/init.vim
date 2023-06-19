@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-    Plug 'folke/tokyonight.nvim'
+    Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
 <<<<<<< HEAD
     Plug 'itchyny/lightline.vim' 
@@ -168,7 +168,11 @@ command! Current lcd %:p:h
 nnoremap<space>z :Current <cr>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 colorscheme tokyonight
 =======
 colorscheme rose-pine
 >>>>>>> parent of 2122794 (nvim - change theme - rose-pine-moon)
+=======
+colorscheme catppuccin-macchiato
+>>>>>>> parent of 41f421a (nvim - add theme - tokyonight)
