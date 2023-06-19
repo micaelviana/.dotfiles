@@ -147,4 +147,4 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
-colorscheme catppuccin-mocha
+colorscheme catppuccin-macchiato
