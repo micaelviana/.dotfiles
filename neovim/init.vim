@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
+<<<<<<< HEAD
     Plug 'itchyny/lightline.vim' 
     Plug 'windwp/nvim-autopairs' 
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} 
