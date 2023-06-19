@@ -19,7 +19,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'folke/tokyonight.nvim'
 
-<<<<<<< HEAD
     Plug 'itchyny/lightline.vim' 
     Plug 'windwp/nvim-autopairs' 
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} 
@@ -34,22 +33,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets' 
     Plug 'unblevable/quick-scope' 
     Plug 'mhinz/vim-startify' 
-=======
-    Plug 'itchyny/lightline.vim' "statusline
-    Plug 'LunarWatcher/auto-pairs' "autopairs
-    Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
-    Plug 'tpope/vim-sensible' "tpope
-    Plug 'preservim/nerdtree' "Sidebar
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "treesitter
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
-    Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
-    Plug 'tpope/vim-commentary' "Comment stuff out
-    Plug 'haya14busa/is.vim' "is.vim - incremental search improved
-    Plug 'SirVer/ultisnips' "Create new snippets
-    Plug 'honza/vim-snippets' "Collection of snippets for various languages
-    Plug 'unblevable/quick-scope' "moving horizontally
-    Plug 'mhinz/vim-startify' "start screen
->>>>>>> parent of 1903508 (nvim - add plugin - nvim-autopairs)
     Plug 'christoomey/vim-tmux-navigator'
     "Candy
     Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' 
@@ -97,7 +80,7 @@ augroup END
 
 "----------------Functions
 function TurnLight () 
-    colorscheme rose-pine-dawn
+    colorscheme tokyonight-day
     set background=light
 endfunction
 
@@ -126,14 +109,11 @@ nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
 <<<<<<< HEAD
 nnoremap <silent><leader>q :wq <cr>
-<<<<<<< HEAD
 nnoremap <silent><leader>Q :wq <cr>
 =======
 nnoremap <silent><leader>q :q <cr>
 nnoremap <silent><leader>z :xa <cr>
 >>>>>>> parent of 2122794 (nvim - change theme - rose-pine-moon)
-=======
->>>>>>> parent of 1903508 (nvim - add plugin - nvim-autopairs)
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :q <cr>
