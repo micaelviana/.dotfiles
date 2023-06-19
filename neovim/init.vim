@@ -107,8 +107,13 @@ let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
+<<<<<<< HEAD
 nnoremap <silent><leader>q :wq <cr>
 nnoremap <silent><leader>Q :wq <cr>
+=======
+nnoremap <silent><leader>q :q <cr>
+nnoremap <silent><leader>z :xa <cr>
+>>>>>>> parent of 2122794 (nvim - change theme - rose-pine-moon)
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :q <cr>
@@ -142,4 +147,8 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
+<<<<<<< HEAD
 colorscheme tokyonight
+=======
+colorscheme rose-pine
+>>>>>>> parent of 2122794 (nvim - change theme - rose-pine-moon)
