@@ -16,8 +16,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
     "Themes
     Plug 'EdenEast/nightfox.nvim'
+    Plug 'arcticicestudio/nord-vim' 
+    Plug 'morhetz/gruvbox'
     Plug 'haishanh/night-owl.vim'
     Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+    Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
