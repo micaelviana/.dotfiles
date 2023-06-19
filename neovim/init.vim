@@ -1,8 +1,9 @@
 "----------PLUGIN MANAGER
-" Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"Automatically install vim-plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Run PlugInstall if there are missing plugins
@@ -12,31 +13,32 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 "List of plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
     "Themes
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'folke/tokyonight.nvim'
 
-    Plug 'itchyny/lightline.vim' 
-    Plug 'windwp/nvim-autopairs' 
-    Plug 'ibhagwan/fzf-lua', {'branch': 'main'} 
-    Plug 'tpope/vim-sensible' 
-    Plug 'preservim/nerdtree' 
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
-    Plug 'psliwka/vim-smoothie' 
-    Plug 'tpope/vim-commentary' 
-    Plug 'haya14busa/is.vim' 
-    Plug 'SirVer/ultisnips'  
-    Plug 'honza/vim-snippets' 
-    Plug 'unblevable/quick-scope' 
-    Plug 'mhinz/vim-startify' 
+    Plug 'itchyny/lightline.vim' "statusline
+    Plug 'windwp/nvim-autopairs'"autopairs
+    Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
+    Plug 'tpope/vim-sensible' "tpope
+    Plug 'preservim/nerdtree' "Sidebar
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "treesitter
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
+    Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
+    Plug 'tpope/vim-commentary' "Comment stuff out
+    Plug 'haya14busa/is.vim' "is.vim - incremental search improved
+    Plug 'SirVer/ultisnips' "Create new snippets
+    Plug 'honza/vim-snippets' "Collection of snippets for various languages
+    Plug 'unblevable/quick-scope' "moving horizontally
+    Plug 'mhinz/vim-startify' "start screen
     Plug 'christoomey/vim-tmux-navigator'
     "Candy
-    Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' 
+    Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
+
 "----------END (PLUGIN MANAGER)
 
 "----------GENERAL----------
@@ -75,8 +77,12 @@ set nobackup nowritebackup noswapfile
 augroup OpenImages
       autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
-" highlighting a selection on yank
- au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
+"Restore cursor shape after leaving Neovim
+augroup GuiCursor
+      autocmd VimLeave * set guicursor=a:ver30-blinkoff300
+augroup END
+"highlighting a selection on yank
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
 
 "----------------Functions
 function TurnLight () 
@@ -116,7 +122,7 @@ nnoremap <silent> \Q :q <cr>
 nnoremap <silent> \z :xa <cr>
 nnoremap <silent> \Z :xa <cr>
 "paste in insert mode using Ctrl+V
-" inoremap<c-v> <esc>pa
+inoremap<c-v> <esc>pa
 "go to normal mode
 nnoremap s :
 vnoremap s :
