@@ -16,10 +16,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
     "Themes
     Plug 'EdenEast/nightfox.nvim'
-    Plug 'arcticicestudio/nord-vim' 
-    Plug 'morhetz/gruvbox'
     Plug 'haishanh/night-owl.vim'
-    Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+    Plug 'folke/tokyonight.nvim'
     Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
@@ -86,7 +84,7 @@ augroup END
 
 "----------------Functions
 function TurnLight () 
-    colorscheme rose-pine-dawn
+    colorscheme tokyonight-day
     set background=light
 endfunction
 
@@ -131,4 +129,4 @@ noremap <Del> "_x
 command! Current lcd %:p:h 
 nnoremap<space>z :Current <cr>
 
-colorscheme rose-pine-moon
+colorscheme tokyonight-storm
