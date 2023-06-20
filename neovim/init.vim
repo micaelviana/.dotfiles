@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'folke/tokyonight.nvim'
-    Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
     Plug 'tpope/vim-sensible' "tpope
