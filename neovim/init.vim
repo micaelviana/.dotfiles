@@ -21,9 +21,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'arzg/vim-colors-xcode' "light theme
 
     Plug 'itchyny/lightline.vim' "statusline
+    Plug 'tpope/vim-sensible' "tpope
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'preservim/nerdtree' "Sidebar
-    Plug 'sheerun/vim-polyglot' "while Treesitter is not here
+    Plug 'nvim-treesitter/nvim-treesitter' "highlight code
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
     Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
     Plug 'tpope/vim-commentary' "Comment stuff out
@@ -81,12 +82,6 @@ augroup END
 augroup GuiCursor
       autocmd VimLeave * set guicursor=a:ver30-blinkoff300
 augroup END
-
-"----------------Functions
-function TurnLight () 
-    colorscheme tokyonight-day
-    set background=light
-endfunction
 
 
 "----------KEYMAPS----------
