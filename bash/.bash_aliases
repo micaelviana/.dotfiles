@@ -8,6 +8,7 @@ alias zshr="exec zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
 alias g="git"
+alias ga="git add"
 alias gau="git add -u"
 alias gc="git commit -m"
 alias gp="git push"
