@@ -20,7 +20,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'folke/tokyonight.nvim'
 
     Plug 'itchyny/lightline.vim' 
-    Plug 'easymotion/vim-easymotion' 
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} 
