@@ -1,3 +1,4 @@
 nnoremap <c-p> :Telescope find_files <CR>
-nnoremap <c-b> :Telescope buffers <CR>
-nnoremap <c-r> :Telescope oldfiles <CR>
+nmap tf :Telescope find_files <CR>
+nmap tb :Telescope buffers <CR>
+nmap to :Telescope oldfiles <CR>
