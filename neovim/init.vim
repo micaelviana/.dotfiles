@@ -20,7 +20,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'folke/tokyonight.nvim'
 
     Plug 'itchyny/lightline.vim' 
-    Plug 'phaazon/hop.nvim'
     Plug 'easymotion/vim-easymotion' 
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
@@ -36,15 +35,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'unblevable/quick-scope' 
     Plug 'mhinz/vim-startify' 
     Plug 'christoomey/vim-tmux-navigator'
-
-
     "Candy
     Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
-lua require('hop').setup()
-nnoremap <space>h :HopWord <cr>
-
 "----------END (PLUGIN MANAGER)
 
 "----------GENERAL----------
