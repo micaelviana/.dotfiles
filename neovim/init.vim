@@ -31,7 +31,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'haya14busa/is.vim' 
     Plug 'SirVer/ultisnips' 
     Plug 'honza/vim-snippets' 
-    Plug 'unblevable/quick-scope' 
     Plug 'mhinz/vim-startify' 
     Plug 'christoomey/vim-tmux-navigator'
     "Candy
