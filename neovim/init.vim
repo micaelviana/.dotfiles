@@ -22,6 +22,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim' 
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+    Plug 'nvim-lua/plenary.nvim'
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} 
     Plug 'preservim/nerdtree' 
     Plug 'nvim-treesitter/nvim-treesitter' 
@@ -34,7 +36,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify' 
     Plug 'christoomey/vim-tmux-navigator'
     "Candy
-    Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons'
+    Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "----------END (PLUGIN MANAGER)
 
