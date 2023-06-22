@@ -13,27 +13,28 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 "List of plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} 
     "Themes
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'folke/tokyonight.nvim'
 
-    Plug 'itchyny/lightline.vim' "statusline
-    Plug 'easymotion/vim-easymotion' "Vim motions on speed!
-    Plug 'phaazon/hop.nvim' "Neovim motions on speed!
-    Plug 'tpope/vim-sensible' "tpope
-    Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
-    Plug 'preservim/nerdtree' "Sidebar
-    Plug 'nvim-treesitter/nvim-treesitter' "highlight code
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
-    Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
-    Plug 'tpope/vim-commentary' "Comment stuff out
-    Plug 'haya14busa/is.vim' "is.vim - incremental search improved
-    Plug 'SirVer/ultisnips' "Create new snippets
-    Plug 'honza/vim-snippets' "Collection of snippets for various languages
-    Plug 'unblevable/quick-scope' "moving horizontally
-    Plug 'mhinz/vim-startify' "start screen
+    Plug 'itchyny/lightline.vim' 
+    Plug 'phaazon/hop.nvim'
+    Plug 'easymotion/vim-easymotion' 
+    Plug 'phaazon/hop.nvim' 
+    Plug 'tpope/vim-sensible' 
+    Plug 'ibhagwan/fzf-lua', {'branch': 'main'} 
+    Plug 'preservim/nerdtree' 
+    Plug 'nvim-treesitter/nvim-treesitter' 
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
+    Plug 'psliwka/vim-smoothie' 
+    Plug 'tpope/vim-commentary' 
+    Plug 'haya14busa/is.vim' 
+    Plug 'SirVer/ultisnips' 
+    Plug 'honza/vim-snippets' 
+    Plug 'unblevable/quick-scope' 
+    Plug 'mhinz/vim-startify' 
     Plug 'christoomey/vim-tmux-navigator'
 
 
