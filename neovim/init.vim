@@ -20,6 +20,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'folke/tokyonight.nvim'
 
     Plug 'itchyny/lightline.vim' "statusline
+    Plug 'easymotion/vim-easymotion' "Vim motions on speed!
+    Plug 'phaazon/hop.nvim' "Neovim motions on speed!
     Plug 'tpope/vim-sensible' "tpope
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'} "fzf lua
     Plug 'preservim/nerdtree' "Sidebar
@@ -36,8 +38,11 @@ call plug#begin('~/.vim/plugged')
 
 
     "Candy
-    Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons' "Icons for VIM
+    Plug 'nvim-tree/nvim-web-devicons' | Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+lua require('hop').setup()
+nnoremap <space>h :HopWord <cr>
 
 "----------END (PLUGIN MANAGER)
 

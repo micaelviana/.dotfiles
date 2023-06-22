@@ -56,7 +56,7 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
+  if Coc('hasProvider', 'hover')
     call CocActionAsync('doHover')
   else
     call feedkeys('K', 'in')
@@ -99,7 +99,7 @@ xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 
 " Run the Code Lens action on the current line
-nmap <leader>cl  <Plug>(coc-codelens-action)
+nmap \cl  <Plug>(coc-codelens-action)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server
