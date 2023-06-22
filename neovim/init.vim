@@ -82,6 +82,14 @@ augroup GuiCursor
 augroup END
 
 
+"---------------FUNCTIONS
+"command to change the working directory to the directory of the current file
+function ChangeCurrentDirectory()
+    lcd %:p:h
+    pwd
+endfunction
+nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
+
 "----------KEYMAPS----------
 "set mapleader
 let mapleader = " "
@@ -91,8 +99,8 @@ nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :wq <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
-nnoremap <silent> \q :q <cr>
-nnoremap <silent> \Q :q <cr>
+nnoremap <silent> \q :wq <cr>
+nnoremap <silent> \Q :wq <cr>
 nnoremap <silent> \z :xa <cr>
 nnoremap <silent> \Z :xa <cr>
 "paste in insert mode using Ctrl+V
@@ -106,7 +114,7 @@ nnoremap \a ggVG
 nnoremap + <c-a>
 nnoremap - <c-x>
 "replace selected content faster
-nnoremap _ :%s///g<Left><Left>
+nnoremap ( :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -118,8 +126,4 @@ noremap <Del> "_x
 "Tip(I always forget)
 "Press ^ to go to the first non white space character on the line.
 "Press g_ to go to the last non whitespace character in the line.
-"command to change the working directory to the directory of the current file
-command! Current lcd %:p:h 
-nnoremap<space>z :Current <cr>
-
 colorscheme tokyonight-storm
