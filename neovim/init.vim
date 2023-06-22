@@ -21,7 +21,6 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'itchyny/lightline.vim' 
     Plug 'phaazon/hop.nvim' 
-    Plug 'unblevable/quick-scope'
     Plug 'tpope/vim-sensible' 
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
     Plug 'nvim-lua/plenary.nvim'
