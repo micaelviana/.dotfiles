@@ -16,7 +16,6 @@ plugins=(
     fzf 
     zsh-autosuggestions 
     zsh-syntax-highlighting
-    completions
 )
 
 #Sources oh-my-zsh config file
