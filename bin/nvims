@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 #I got this from this from https://gist.github.com/elijahmanor/
-alias nvim-default="NVIM_APPNAME=nvim nvim"
-alias nvim-test="NVIM_APPNAME=vimtest nvim"
-
 items=("nvim" "vimtest")
 config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
 if [[ -z $config ]]; then
