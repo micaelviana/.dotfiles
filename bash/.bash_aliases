@@ -2,6 +2,7 @@
 #Common aliases
 alias vi=nvim
 alias vid="nvim ."
+alias vif="fd --type f --hidden --exclude .git --print0 | fzf --read0 --print0 --exit-0 | xargs -r -0 nvim"
 alias cl="clear"
 alias py="python"
 alias zshr="exec zsh"
