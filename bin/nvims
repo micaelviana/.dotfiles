@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#I take this from https://gist.github.com/elijahmanor/
 alias nvim-default="NVIM_APPNAME=nvim nvim"
 alias nvim-test="NVIM_APPNAME=vimtest nvim"
 
