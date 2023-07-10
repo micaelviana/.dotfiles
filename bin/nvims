@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 alias nvim-default="NVIM_APPNAME=nvim nvim"
 alias nvim-test="NVIM_APPNAME=vimtest nvim"
@@ -12,5 +12,3 @@ elif [[ $config == "default" ]]; then
     config=""
 fi
 NVIM_APPNAME=$config nvim $@
-
-bindkey -s ^a "nvims\n"
