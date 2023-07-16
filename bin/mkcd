@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-dir=$1
-if [ -d "$dir" ]; then
-    cd "$dir" || exit 1
-else
-    mkdir "$dir" && cd "$dir" || exit 1 
-fi
