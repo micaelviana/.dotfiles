@@ -8,15 +8,8 @@ Clone into your `$HOME` directory
 git clone https://github.com/micaelviana/dotfiles.git ~/.dotfiles
 ```
 
-Symlink dotfiles
+Stow
 
 ```bash
-stow * # Symlink everything 
+stow */ # Everything (the '/' ignores the README)
 ```
-
-or
-
-```bash
-stow zsh vim # Symlink just what you want
-```
-
