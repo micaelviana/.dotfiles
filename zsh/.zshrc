@@ -18,6 +18,10 @@ plugins=(
     copyfile 
     copybuffer 
     copypath
+    extract
+    fancy-ctrl-z
+    sudo
+    transfer
     fzf 
     zsh-autosuggestions 
     zsh-syntax-highlighting
