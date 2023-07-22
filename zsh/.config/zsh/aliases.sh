@@ -11,7 +11,7 @@ alias g="git"
 alias ga="git add"
 alias gau="git add -u"
 alias gc="git commit -m"
-alias gp="git push"
+alias gp="git push origin master"
 alias gpl="git pull"
 alias gs="git status"
 #lsd aliases
