@@ -20,7 +20,6 @@ alias l='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 
-
 #detect distro
 if [ -f "/etc/arch-release" ]; then
   alias pacinstall="sudo pacman -S --needed"
