@@ -13,11 +13,6 @@ source $HOME/.config/zsh/exports.sh
 source $HOME/.config/zsh/aliases.sh
 source $HOME/.config/zsh/functions.sh
 
-# Define the function
-gc() {
-  git commit -m "$*"
-}
-
 #Plugins
 plugins=(
     copyfile 
