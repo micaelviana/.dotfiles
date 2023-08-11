@@ -20,6 +20,7 @@ plugins=(
     copypath
     extract
     fancy-ctrl-z
+    forgit
     sudo
     transfer
     fzf 
