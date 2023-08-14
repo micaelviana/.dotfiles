@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-#show all paths
-echo -e ${PATH//:/\\n}

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-#start tmux in the same section
-[ -z "$TMUX"  ] && { tmux attach || tmux new-session ;}

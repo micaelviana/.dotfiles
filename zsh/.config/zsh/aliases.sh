@@ -7,9 +7,12 @@ alias py="python"
 alias zshr="exec zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
+alias tao='[ -z "$TMUX"  ] && { tmux attach || tmux new-session ;}'
+alias path='echo -e ${PATH//:/\\n}'
 alias g="git"
 alias gau="git add -u"
 alias gp="git push origin master"
+alias guntrack='echo -e "a\n*\nq\n"|git add -i'
 alias gpl="git pull"
 alias gs="git status"
 #lsd aliases
