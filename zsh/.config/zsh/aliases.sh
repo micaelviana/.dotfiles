@@ -8,12 +8,9 @@ alias py="python"
 alias zshr="exec zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
-alias tao='[ -z "$TMUX"  ] && { tmux attach || tmux new-session ;}'
-alias path='echo -e ${PATH//:/\\n}'
 alias g="git"
 alias gau="git add -u"
 alias gp="git push origin master"
-alias guntrack='echo -e "a\n*\nq\n"|git add -i'
 alias gpl="git pull"
 alias gs="git status"
 #lsd aliases
@@ -24,24 +21,24 @@ alias lla='lsd -la'
 
 #detect distro
 if [ -f "/etc/arch-release" ]; then
-  alias pacinstall="sudo pacman -S --needed"
-  alias pacupdate="sudo pacman -Syu"
-  alias pacsearch="pacman -Ss"
-  alias pacuninstall="sudo pacman -Rns"
-  alias pacunlock="sudo rm /var/lib/pacman/db.lck"
-  alias paccleanup='sudo pacman -Rs "$(pacman -Qtdq)"'
-  alias aurupdate='yay -Sua'
-  alias aurinstall='yay -S'
-  alias aursearch='yay -Ss'
-  alias auruninstall='yay -Rns'
-  alias aurlist="pacman -Qm"
+  alias pacin="sudo pacman -S --needed"
+  alias pacud="sudo pacman -Syu"
+  alias pacse="pacman -Ss"
+  alias pacre="sudo pacman -Rns"
+  alias pacun="sudo rm /var/lib/pacman/db.lck"
+  alias paccl='sudo pacman -Rs "$(pacman -Qtdq)"'
+  alias aurup='yay -Sua'
+  alias aurin='yay -S'
+  alias aurse='yay -Ss'
+  alias aurre='yay -Rns'
+  alias aurli="pacman -Qm"
 else
 # assume ubuntu based
-  alias aptinstall="sudo nala install"
-  alias aptupdate="sudo nala update"
-  alias aptupgrade="sudo nala upgrade"
-  alias aptsearch="nala search"
-  alias aptuninstall="sudo nala purge"
+  alias aptin="sudo nala install"
+  alias aptud="sudo nala update"
+  alias aptupg="sudo nala upgrade"
+  alias aptse="nala search"
+  alias aptre="sudo nala purge"
 
   alias bat=batcat
   alias fd=fdfind
