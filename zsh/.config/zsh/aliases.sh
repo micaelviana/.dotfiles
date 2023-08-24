@@ -8,6 +8,7 @@ alias py="python"
 alias zshr="exec zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
+alias rm='trash-put'
 alias g="git"
 alias gau="git add -u"
 alias gp="git push origin master"
