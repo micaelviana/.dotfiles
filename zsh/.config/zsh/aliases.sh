@@ -11,7 +11,7 @@ alias usage='du -h -d1'
 alias rm='trash-put'
 alias g="git"
 alias gau="git add -u"
-alias gp="git push origin master"
+alias gp="git push origin HEAD"
 alias gpl="git pull"
 alias gs="git status"
 #lsd aliases
