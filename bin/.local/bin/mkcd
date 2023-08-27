@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 dir=$1
-mkdir -p "$dir" && cd "$dir" || exit 1
+mkdir -p "$dir" 
+cd "$dir" || exit 1
