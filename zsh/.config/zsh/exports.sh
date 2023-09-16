@@ -18,5 +18,5 @@ addToPathFront() {
         export PATH=$1:$PATH
     fi
 }
-addToPathFront "$HOME"/.local/bin
-addToPathFront /mnt/c/Users/Micael/AppData/Local/shims
+addToPath "$HOME"/.local/bin
+addToPath /mnt/c/Users/Micael/AppData/Local/shims
