@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
-
-echo -e "a\n*\nq\n"|git add -i
+[master 2d6d6ad] bin - rename guntrack -
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename bin/.local/bin/{guntrack => ganew} (100%)
