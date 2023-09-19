@@ -1,2 +1,2 @@
-[master e2cdb20] bin - rename guntrack -
- 1 file changed, 3 insertions(+), 3 deletions(-)
+#!/usr/bin/env bash
+echo -e "a\n*\nq\n"|git add -i
