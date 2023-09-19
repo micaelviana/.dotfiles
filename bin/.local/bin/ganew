@@ -1,3 +1,2 @@
-[master 2d6d6ad] bin - rename guntrack -
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename bin/.local/bin/{guntrack => ganew} (100%)
+[master e2cdb20] bin - rename guntrack -
+ 1 file changed, 3 insertions(+), 3 deletions(-)
