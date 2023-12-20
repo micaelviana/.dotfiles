@@ -10,6 +10,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
 alias rm='trash-put'
 alias g="git"
+alias gc="git clone --recurse-submodules"
 alias gau="git add -u"
 alias gp="git push origin HEAD"
 alias gpl="git pull"
