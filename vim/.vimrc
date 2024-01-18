@@ -4,6 +4,10 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
 "List of plugins
 call plug#begin('~/.vim/plugged')
 "    Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete + LSP 
@@ -22,7 +26,6 @@ call plug#begin('~/.vim/plugged')
     "fuzzy file finder
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
     Plug 'junegunn/fzf.vim'
-    Plug 'lambdalisue/fern.vim' "tree viewer written in Pure Vim script
     Plug 'tpope/vim-commentary' "commentary.vim: comment stuff out
 
 call plug#end()
@@ -64,25 +67,33 @@ if has('termguicolors')  "enable terminal colors
     set termguicolors  
 endif
 " Disable all backup files
-set nobackup
-set nowritebackup
-set noswapfile
-
+set nobackup nowritebackup noswapfile
 
 "---------------AUTOCOMMANDS
 "autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 "Open images from VIM on Linux
 augroup OpenImages
-      autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw 
+      autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
-"Restore cursor shape after leaving Neovim
-augroup GuiCursor
-      autocmd VimLeave * set guicursor=a:ver30-blinkoff300
-augroup END
+"highlight yank
+if has('nvim')
+    au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
+endif
+"---------------COMMANDS
+"remove M^ characters
+command WindowsCleaning %s/\r/
+
+"---------------FUNCTIONS
+"command to change the working directory to the directory of the current file
+function ChangeCurrentDirectory()
+    lcd %:p:h
+    pwd
+endfunction
+nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
 
 "-------------------CLIPBOARD, if windows
 "detect WSL is harder in VIM than in Neovim, so we use this function
-let isWSL=2
+let isWSL=0
 let uname = substitute(system('uname'),'\n','','')
 if uname == 'Linux'
     let lines = readfile("/proc/version")
@@ -108,34 +119,29 @@ if isWSL == 1
             \ }
 endif
 
-"------------------------FUNCTIONS
-function Current()
-    lcd %:p:h
-endfunction
-
 "----------KEYMAPS----------
 "set mapleader
 let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
-nnoremap <silent><leader>W :w <cr>
-nnoremap <silent><leader>q :q <cr>
-nnoremap <silent><leader>x :xa <cr>
+nnoremap <silent><leader>q :xa <cr>
 nnoremap <silent> \w :w <cr>
-nnoremap <silent> \W :w <cr>
-nnoremap <silent> \q :q <cr>
-nnoremap <silent> \Q :q <cr>
-nnoremap <silent> \z :wqa <cr>
-nnoremap <silent> \Z :wqa <cr>
+nnoremap <silent> \q :xa <cr>
+nnoremap <silent> \z :xa <cr>
+"make executable
+nnoremap <silent><space>x :!chmod +x %<cr>
 "paste in insert mode using Ctrl+V
-inoremap<c-v> <esc>pi
+inoremap<c-v> <esc>pa
 "go to normal mode
 nnoremap s :
+vnoremap s :
 "select all
-nnoremap<c-a> ggVG
+nnoremap \a ggVG
+"increment/decrement
+nnoremap + <c-a>
+nnoremap - <c-x>
 "replace selected content faster
-" nnoremap <leader>r :%s///g<Left><Left>
-nnoremap _ :%s///g<Left><Left>
+nnoremap ( :%s///g<Left><Left>
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -143,53 +149,13 @@ noremap! <C-h> <C-w>
 noremap x "_x
 noremap X "_x
 noremap <Del> "_x
-"Tip(I always forget)
-"Press ^ to go to the first non white space character on the line.
-"Press g_ to go to the last non whitespace character in the line.
-"keymap to call the Cur() function
-nnoremap<space>z :call Cur()<cr>
-
 
 "{{From plugins}}
-colorscheme monokai
 "lightline just works in VIM if you put this
 set laststatus=2
-let g:lightline={'colorscheme':'deus'}
+let g:lightline={'colorscheme':'nord'}
 "fzf
 nnoremap <c-p> :Files <cr>
-"fern
-" Custom settings and mappings.
-"let g:fern#disable_default_mappings = 1
-
-noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
-
-function! FernInit() abort
-  nmap <buffer><expr>
-        \ <Plug>(fern-my-open-expand-collapse)
-        \ fern#smart#leaf(
-        \   "\<Plug>(fern-action-open:select)",
-        \   "\<Plug>(fern-action-expand)",
-        \   "\<Plug>(fern-action-collapse)",
-        \ )
-  nmap <buffer> <CR> <Plug>(fern-my-open-expand-collapse)
-  nmap <buffer> <2-LeftMouse> <Plug>(fern-my-open-expand-collapse)
-  nmap <buffer> n <Plug>(fern-action-new-path)
-  nmap <buffer> d <Plug>(fern-action-remove)
-  nmap <buffer> m <Plug>(fern-action-move)
-  nmap <buffer> M <Plug>(fern-action-rename)
-  nmap <buffer> h <Plug>(fern-action-hidden-toggle)
-  nmap <buffer> r <Plug>(fern-action-reload)
-  nmap <buffer> b <Plug>(fern-action-open:split)
-  nmap <buffer> v <Plug>(fern-action-open:vsplit)
-  nmap <buffer><nowait> < <Plug>(fern-action-leave)
-  nmap <buffer><nowait> > <Plug>(fern-action-enter)
-endfunction
-
-augroup FernGroup
-  autocmd!
-  autocmd FileType fern call FernInit()
-augroup END
-
 "vim-mucomplete
 set completeopt+=menuone
 set completeopt+=noselect
@@ -199,3 +165,4 @@ let g:mucomplete#enable_auto_at_startup = 1
 
 " Select the complete menu item like CTRL+y would.
 inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
+colorscheme nord
