@@ -19,4 +19,4 @@ addToPathFront() {
     fi
 }
 addToPath "$HOME"/.local/bin
-addToPath /mnt/c/Users/Micael/AppData/Local/shims
+addToPath "$HOME"/.local/utilities
