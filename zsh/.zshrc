@@ -19,6 +19,7 @@ plugins=(
     copybuffer 
     copypath
     extract
+    fzf-tab
     fancy-ctrl-z
     forgit
     nvm
