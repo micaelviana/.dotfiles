@@ -18,5 +18,5 @@ addToPathFront() {
         export PATH=$1:$PATH
     fi
 }
-addToPath "$HOME"/.local/bin
-addToPath "$HOME"/.local/utilities
+addToPath "$HOME/.local/bin"
+addToPath "$HOME/.local/utilities"
