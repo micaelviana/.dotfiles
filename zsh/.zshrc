@@ -23,7 +23,6 @@ plugins=(
     fancy-ctrl-z
     forgit
     nvm
-    sudo
     transfer
     fzf 
     zsh-autosuggestions 
