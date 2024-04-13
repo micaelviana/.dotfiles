@@ -1,6 +1,7 @@
 #make sure command is installed
-if [ ! -d "$HOME/.oh-my-zsh" ]; 
-    then sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"; 
+if [ ! -d "$HOME/.oh-my-zsh" ]; then 
+        sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"; 
+        rm ~/.zshrc
 fi
 
 # Path to your oh-my-zsh installation.
