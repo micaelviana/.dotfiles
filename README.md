@@ -18,7 +18,7 @@ stow .
 Backup packages
 
 ```sh
-dpkg --get-selections | awk '{print $1}' > package_list/ubuntu.txt
+apt list --installed | awk -F'/' '{print $1}' > package_list/ubuntu.txt
 
 ```
 Install packages
