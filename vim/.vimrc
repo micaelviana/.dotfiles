@@ -122,6 +122,8 @@ endif
 "----------KEYMAPS----------
 "set mapleader
 let mapleader = " "
+"new lines
+nnoremap <return> o<esc>
 "save and close
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>q :xa <cr>
@@ -156,6 +158,7 @@ set laststatus=2
 let g:lightline={'colorscheme':'nord'}
 "fzf
 nnoremap <c-p> :Files <cr>
+nnoremap tf :Files <cr>
 "vim-mucomplete
 set completeopt+=menuone
 set completeopt+=noselect
