@@ -1,0 +1,7 @@
+[user]
+	name = Micael Viana
+	email = micael.vianasilva@gmail.com
+[core]
+	editor = nvim
+[credential]
+	helper = cache --timeout=604800
