@@ -32,6 +32,7 @@ python-pip
 python-pynvim
 ranger
 ripgrep
+run-parts
 shellcheck
 sshfs
 stow
