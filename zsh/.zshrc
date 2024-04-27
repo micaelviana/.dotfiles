@@ -21,10 +21,8 @@ plugins=(
     copypath
     extract
     fzf-tab
-    fancy-ctrl-z
     forgit
     nvm
-    transfer
     fzf 
     zsh-autosuggestions 
     zsh-syntax-highlighting
