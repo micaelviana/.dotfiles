@@ -11,7 +11,7 @@ git clone https://github.com/micaelviana/.dotfiles.git
 Stow
 
 ```bash
-stow .
+stow . 
 ```
 
 ## Ubuntu
@@ -36,7 +36,7 @@ pacman -Qe | awk '{print $1 }' > package_list/arch.txt
 ```
 Install packages
 ```sh
-yay -S --no-confirm --needed - < package_list/arch.txt
+yay -S --noconfirm --needed - < package_list/arch.txt
 ```
 
  ### AUR Helper
