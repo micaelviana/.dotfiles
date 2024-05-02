@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+for i in $(echo gitconfig tmux utilities vim zsh); do stow $i -t ~ --verbose; done
