@@ -27,7 +27,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-commentary' "commentary.vim: comment stuff out
-
 call plug#end()
 "----------GENERAL----------
 syntax enable
@@ -40,9 +39,6 @@ set number relativenumber "Display line numbers
 set cursorline "highlit cursor line
 set mouse=a "enable mouse interaction
 set ignorecase "disable case sensitive in search and commands
-if has('nvim')
-    set inc=split "command preview
-endif
 set splitright splitbelow "define which way the splits open
 set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 "indentation
@@ -73,10 +69,6 @@ set nobackup nowritebackup noswapfile
 augroup OpenImages
       autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
-"highlight yank
-if has('nvim')
-    au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
-endif
 "---------------COMMANDS
 "remove M^ characters
 command WindowsCleaning %s/\r/
