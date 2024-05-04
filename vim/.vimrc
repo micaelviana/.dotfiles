@@ -44,9 +44,7 @@ if has('nvim')
     set inc=split "command preview
 endif
 set splitright splitbelow "define which way the splits open
-if has('clipboard')
-    set clipboard=unnamedplus "Copy/paste between vim and other programs.
-endif
+set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 "indentation
 set autoindent
 set expandtab
@@ -97,7 +95,7 @@ let isWSL=0
 let uname = substitute(system('uname'),'\n','','')
 if uname == 'Linux'
     let lines = readfile("/proc/version")
-    if lines[0] =~ "Microsoft"
+    if lines[0] =~ "microsoft"
         let isWSL = 1
     else
         let isWSL = 0
@@ -105,18 +103,18 @@ if uname == 'Linux'
 endif
 
 if isWSL == 1
-      let g:clipboard = {
-            \   'name': 'win32yank-wsl',
-            \   'copy': {
-            \      '+': '/usr/local/bin/win32yank.exe -i --crlf',
-            \      '*': '/usr/local/bin/win32yank.exe -i --crlf',
-            \    },
-            \   'paste': {
-            \      '+': '/usr/local/bin/win32yank.exe -o --lf',
-            \      '*': '/usr/local/bin/win32yank.exe -o --lf',
-            \   },
-            \   'cache_enabled': 0,
-            \ }
+    let g:clipboard = {
+                \   'name': 'win32yank-wsl',
+                \   'copy': {
+                \      '+': 'win32yank.exe -i --crlf',
+                \      '*': 'win32yank.exe -i --crlf',
+                \    },
+                \   'paste': {
+                \      '+': 'win32yank.exe -o --lf',
+                \      '*': 'win32yank.exe -o --lf',
+                \   },
+          \   'cache_enabled': 0,
+          \ }
 endif
 
 "----------KEYMAPS----------

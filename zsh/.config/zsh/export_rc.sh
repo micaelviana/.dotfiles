@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #EXPORTS
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 export EDITOR=nvim
 export SUDO_EDITOR=nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
