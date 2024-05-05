@@ -14,7 +14,6 @@ plugins=(
     copybuffer 
     copypath
     extract
-    fzf-tab
     forgit
     nvm
     fzf 
