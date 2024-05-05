@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
     Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
     Plug 'haya14busa/is.vim' "is.vim - incremental search improved
+    Plug 'lambdalisue/suda.vim'
     Plug 'christoomey/vim-tmux-navigator'
     "fuzzy file finder
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
