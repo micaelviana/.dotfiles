@@ -147,7 +147,7 @@ noremap <Del> "_x
 "{{From plugins}}
 "lightline just works in VIM if you put this
 set laststatus=2
-let g:lightline={'colorscheme':'nord'}
+let g:lightline={'colorscheme':'rosepine'}
 "fzf
 nnoremap <c-p> :Files <cr>
 nnoremap tf :Files <cr>
