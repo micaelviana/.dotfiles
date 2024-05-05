@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
     "Themes
     Plug 'arcticicestudio/nord-vim' 
     Plug 'crusoexia/vim-monokai'
+    Plug 'rose-pine/vim'
     Plug 'itchyny/lightline.vim' "statusline
     "Autocomplete
     Plug 'lifepillar/vim-mucomplete'
@@ -159,4 +160,4 @@ let g:mucomplete#enable_auto_at_startup = 1
 
 " Select the complete menu item like CTRL+y would.
 inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
-colorscheme nord
+colorscheme rosepine
