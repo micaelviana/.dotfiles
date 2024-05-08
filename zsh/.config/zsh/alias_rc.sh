@@ -7,7 +7,6 @@ alias c="clear"
 alias py="python"
 alias cdf="zi"
 alias cd="z"
-alias cat="bat"
 alias zshr="exec zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
