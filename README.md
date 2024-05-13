@@ -32,7 +32,7 @@ sudo xargs -a package_list/ubuntu.txt apt install
 Backup packages
 
 ```sh
-pacman -Qe | awk '{print $1 }' > package_list/arch.txt
+pacman -Qet | awk '{print $1 }' > package_list/arch.txt
 ```
 Install packages
 ```sh
