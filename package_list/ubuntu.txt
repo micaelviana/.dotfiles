@@ -428,7 +428,6 @@ nala
 nano
 ncurses-base
 ncurses-bin
-neovim-runtime
 netbase
 netcat-openbsd
 netplan.io
@@ -519,7 +518,6 @@ python3-more-itertools
 python3-msgpack
 python3-mypy
 python3-mypy-extensions
-python3-neovim
 python3-netifaces
 python3-newt
 python3-nose2
