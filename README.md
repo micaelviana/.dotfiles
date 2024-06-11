@@ -23,7 +23,7 @@ apt list --installed | awk -F'/' '{print $1}' > package_list/ubuntu.txt
 ```
 Install packages
 ```sh
-sudo xargs -a package_list/ubuntu.txt apt install
+xargs -a package_list/ubuntu.txt sudo apt install
 ```
 
 
