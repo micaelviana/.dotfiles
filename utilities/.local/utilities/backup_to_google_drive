@@ -1,3 +1,2 @@
-[master cf93110] renamed: google_drive_backup -
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename utilities/.local/utilities/{google_drive_backup => backup_to_google_drive} (100%)
+[master d0d613a] renamed: google_drive_backup -
+ 1 file changed, 3 insertions(+), 28 deletions(-)
