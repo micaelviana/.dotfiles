@@ -11,6 +11,7 @@ alias zshr="exec zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
 alias rm='trash-put'
+alias cpf="copyfile"
 #git
 alias g="git"
 alias gc="git clone --recurse-submodules"
