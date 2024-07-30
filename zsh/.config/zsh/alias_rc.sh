@@ -15,6 +15,7 @@ alias cpf="copyfile"
 #git
 alias g="git"
 alias gc="git clone --recurse-submodules"
+alias gaa="git add ."
 alias gau="git add -u"
 alias gp="git push origin HEAD"
 alias gpl="git pull"
