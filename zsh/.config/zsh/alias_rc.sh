@@ -47,7 +47,4 @@ else
   alias aptupg="sudo nala upgrade"
   alias aptse="nala search"
   alias aptre="sudo nala purge"
-
-  alias bat=batcat
-  alias fd=fdfind
 fi
