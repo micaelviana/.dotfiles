@@ -11,6 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+setopt SHARE_HISTORY      # Share history between sessions
 
 #Plugins
 plugins=(
