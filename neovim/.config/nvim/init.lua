@@ -35,7 +35,7 @@ opt.backup=false
 opt.writebackup=false
 opt.swapfile=false
 
-if vim.fn.has('wsl') then
+if vim.fn.has('wsl') == 1 then
     vim.g.clipboard = {
         name = 'win32yank-wsl',
         copy = {
