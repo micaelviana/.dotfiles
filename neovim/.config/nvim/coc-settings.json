@@ -1,0 +1,41 @@
+{
+    "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"]
+        },
+    },
+    "snippets.userSnippetsDirectory": "~/.config/nvim/coc/ultisnips",
+    "powershell.integratedConsole.showOnStartup": false,
+    "suggest.noselect": false,
+    "snippets.ultisnips.pythonPrompt": false,
+    "suggest.completionItemKindLabels": {
+        "method": "  ",
+        "function": "  ",
+        "variable": "  ",
+        "field": " ﰠ ",
+        "typeParameter": " <T> ",
+        "constant": "  ",
+        "class": " ﴯ ",
+        "interface": "  ",
+        "struct": " פּ ",
+        "event": "  ",
+        "operator": " ",
+        "module": "  ",
+        "property": " ﰠ ",
+        "enum": "  ",
+        "reference": "  ",
+        "keyword": "  ",
+        "file": "  ",
+        "folder": "  ",
+        "color": "  ",
+        "unit": " 塞 ",
+        "snippet": "  ",
+        "text": "  ",
+        "constructor": "  ",
+        "value": "  ",
+        "enumMember": "  ",
+        "default": "  "
+    }
+}
