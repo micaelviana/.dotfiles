@@ -13,14 +13,6 @@ opt.ignorecase=true
 opt.splitright = true
 opt.splitbelow = true
 opt.inccommand = 'split'
-
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
-vim.schedule(function()
-  opt.clipboard = 'unnamedplus'
-end)
-
 opt.smartindent=true
 opt.expandtab=true
 opt.tabstop=4
@@ -34,6 +26,13 @@ opt.termguicolors=true
 opt.backup=false
 opt.writebackup=false
 opt.swapfile=false
+
+-- Sync clipboard between OS and Neovim.
+--  Schedule the setting after `UiEnter` because it can increase startup-time.
+--  Remove this option if you want your OS clipboard to remain independent.
+vim.schedule(function()
+  opt.clipboard = 'unnamedplus'
+end)
 
 if vim.fn.has('wsl') == 1 then
     vim.g.clipboard = {
@@ -49,6 +48,7 @@ if vim.fn.has('wsl') == 1 then
         cache_enabled = true,
     }
 end
+
 
 vim.api.nvim_create_user_command('WindowsCleaning','%s/\r/' , {})
 
