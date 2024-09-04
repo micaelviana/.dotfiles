@@ -38,55 +38,6 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 "----------END (PLUGIN MANAGER)
 
-"----------GENERAL----------
-set hidden "Keep multiple buffers open
-set confirm "ask to save files before quitting
-set number relativenumber "Display line numbers
-set cursorline "highlit cursor line
-set mouse=a "enable mouse interaction
-set ignorecase "disable case sensitive in search and commands
-set inc=split "command preview
-set splitright splitbelow "define which way the splits open
-set clipboard+=unnamedplus "Copy/paste between vim and other programs.
-"indentation
-set smartindent
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
-"When and how to draw the signcolumn.
-set signcolumn=yes
-"Everyone shares this setting
-set backspace=indent,eol,start
-"Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable 
-"delays and poor user experience.
-set updatetime=300
-
-set scrolloff=8 "Minimal number of screen lines to keep above and below the cursor.
-if has('termguicolors')  "enable terminal colors
-    set termguicolors  
-endif
-" Disable all backup files
-set nobackup nowritebackup noswapfile
-
-" WSL Clipboard
-" https://github.com/equalsraf/win32yank/releases {{{
-if(has('wsl'))
-    let g:clipboard = {
-                \   'name': 'win32yank-wsl',
-                \   'copy': {
-                \      '+': 'win32yank.exe -i --crlf',
-                \      '*': 'win32yank.exe -i --crlf',
-                \    },
-                \   'paste': {
-                \      '+': 'win32yank.exe -o --lf',
-                \      '*': 'win32yank.exe -o --lf',
-                \   },
-                \   'cache_enabled': 0,
-                \ }
-endif
-
 "---------------AUTOCOMMANDS
 "Open images from VIM on Linux
 augroup OpenImages
@@ -94,10 +45,6 @@ augroup OpenImages
 augroup END
 "highlight yank
 autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch"}
-
-"---------------COMMANDS
-"remove M^ characters
-command WindowsCleaning %s/\r/
 
 "---------------FUNCTIONS
 "command to change the working directory to the directory of the current file
