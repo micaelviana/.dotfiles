@@ -8,12 +8,6 @@ Clone into your `$HOME` directory
 git clone https://github.com/micaelviana/.dotfiles.git
 ```
 
-Stow
-
-```bash
-stow . 
-```
-
 ## Ubuntu
 Backup packages
 
