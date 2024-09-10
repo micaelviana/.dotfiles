@@ -11,7 +11,6 @@ alias zshr="exec zsh -l"
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage='du -h -d1'
 alias rm='trash-put'
-alias cpf="copyfile"
 alias lastmod='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 alias e='exit'
 #git
