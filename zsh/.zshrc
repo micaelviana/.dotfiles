@@ -17,7 +17,6 @@ setopt SHARE_HISTORY      # Share history between sessions
 plugins=(
     copyfile 
     copybuffer 
-    copypath
     extract
     forgit
     nvm
