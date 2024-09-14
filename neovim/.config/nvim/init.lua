@@ -1,6 +1,3 @@
-local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
-vim.cmd.source(vimrc)
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -22,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = ""
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -40,10 +37,10 @@ require("lazy").setup({
         },
         {
             'numToStr/Comment.nvim',
-            opts = {
-
-            },
+            opts = {},
         },
+        -- themes
+        -- define a theme: {user/repo, lazy=false, priority=1000, vim.cmd.colorscheme('name')}
         { "EdenEast/nightfox.nvim" }, -- lazy
         { "bluz71/vim-nightfly-colors", name = "nightfly" },
         {
@@ -54,7 +51,7 @@ require("lazy").setup({
                 vim.g.sonokai_enable_italic = true
             end
         },
-        { "rebelot/kanagawa.nvim", lazy = false,      priority = 1000 }, -- actual theme
+        { "rebelot/kanagawa.nvim", lazy = false,priority = 1000, vim.cmd.colorscheme('kanagawa')}, -- actual theme
         { "rose-pine/neovim",      name = "rose-pine" },
         {
             'sainnhe/everforest',
@@ -211,4 +208,6 @@ end
 
 vim.api.nvim_create_user_command('WindowsCleaning','%s/\r/' , {})
 
-vim.cmd('colorscheme kanagawa')
+-- source remaning vim configuration
+local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
+vim.cmd.source(vimrc)
