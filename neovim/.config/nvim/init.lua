@@ -51,8 +51,10 @@ require("lazy").setup({
                 vim.g.sonokai_enable_italic = true
             end
         },
-        { "rebelot/kanagawa.nvim", lazy = false,priority = 1000, vim.cmd.colorscheme('kanagawa')}, -- actual theme
-        { "rose-pine/neovim",      name = "rose-pine" },
+        { 
+            "rebelot/kanagawa.nvim", lazy = false,priority = 1000
+        }, 
+        { "rose-pine/neovim", name = "rose-pine" },
         {
             'sainnhe/everforest',
             config = function()
@@ -207,6 +209,7 @@ end
 
 
 vim.api.nvim_create_user_command('WindowsCleaning','%s/\r/' , {})
+vim.cmd.colorscheme('kanagawa')
 
 -- source remaning vim configuration
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
