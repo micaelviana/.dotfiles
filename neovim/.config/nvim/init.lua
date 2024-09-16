@@ -41,26 +41,24 @@ require("lazy").setup({
         },
         -- themes
         -- define a theme: {user/repo, lazy=false, priority=1000, vim.cmd.colorscheme('name')}
-        { "EdenEast/nightfox.nvim" }, -- lazy
-        { "bluz71/vim-nightfly-colors", name = "nightfly" },
+        { "EdenEast/nightfox.nvim" ,lazy=true}, -- lazy
+        { "bluz71/vim-nightfly-colors", name = "nightfly" ,lazy=true},
         {
-            'sainnhe/sonokai',
-            config = function()
-                -- Optionally configure and load the colorscheme
-                -- directly inside the plugin declaration.
-                vim.g.sonokai_enable_italic = true
-            end
+            'sainnhe/sonokai',lazy=true
         },
         { 
-            "rebelot/kanagawa.nvim", lazy = false,priority = 1000
-        }, 
-        { "rose-pine/neovim", name = "rose-pine" },
+            "rebelot/kanagawa.nvim", lazy=true
+        },
+        { "rose-pine/neovim", name = "rose-pine" ,lazy=true},
         {
             'sainnhe/everforest',
+            lazy = false,
+            priority = 1000,
             config = function()
                 -- Optionally configure and load the colorscheme
                 -- directly inside the plugin declaration.
                 vim.g.everforest_enable_italic = true
+                vim.cmd.colorscheme('everforest')
             end
         },
         {
@@ -79,10 +77,6 @@ require("lazy").setup({
             "ibhagwan/fzf-lua",
             -- optional for icon support
             dependencies = { "nvim-tree/nvim-web-devicons" },
-            config = function()
-                -- calling `setup` is optional for customization
-                require("fzf-lua").setup({})
-            end
         },
 
         {
@@ -124,11 +118,6 @@ require("lazy").setup({
         {
             'nvimdev/dashboard-nvim',
             event = 'VimEnter',
-            config = function()
-                require('dashboard').setup {
-                    -- config
-                }
-            end,
             dependencies = { { 'nvim-tree/nvim-web-devicons' } }
         },
 
@@ -209,7 +198,6 @@ end
 
 
 vim.api.nvim_create_user_command('WindowsCleaning','%s/\r/' , {})
-vim.cmd.colorscheme('kanagawa')
 
 -- source remaning vim configuration
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
