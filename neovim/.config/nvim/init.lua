@@ -32,10 +32,6 @@ require("lazy").setup({
     spec = {
         -- add your plugins here
         {
-            'neoclide/coc.nvim',
-            branch = 'release',
-        },
-        {
             'numToStr/Comment.nvim',
             opts = {},
         },
@@ -46,7 +42,7 @@ require("lazy").setup({
         {
             'sainnhe/sonokai',lazy=true
         },
-        { 
+        {
             "rebelot/kanagawa.nvim", lazy=true
         },
         { "rose-pine/neovim", name = "rose-pine" ,lazy=true},
@@ -140,6 +136,7 @@ require("lazy").setup({
         },
 
 
+        {import='plugins'}
     }, --end mica
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
