@@ -58,11 +58,6 @@ require("lazy").setup({
             end
         },
         {
-            'nvim-lualine/lualine.nvim',
-            dependencies = { 'nvim-tree/nvim-web-devicons' }
-        },
-
-        {
             'smoka7/hop.nvim',
             version = "*",
             opts = {
