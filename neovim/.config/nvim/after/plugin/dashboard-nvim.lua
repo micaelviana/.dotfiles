@@ -45,7 +45,7 @@ db.setup({
         desc = 'Configuration',
         key = 'c',
         keymap = ':e $MYVIMRC',
-        action = 'edit ~/.config/nvim/init.vim'
+        action = 'edit ~/.config/nvim/init.lua'
       },
       {
         icon = ' 󰜎 ',
