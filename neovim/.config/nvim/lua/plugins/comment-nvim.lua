@@ -1,5 +1,7 @@
---keep this file for an example of how to add a custom config
--- require('Comment').setup()
+return {
+    'numToStr/Comment.nvim',
+    opts = {},
+-- config = function()
 -- local ft = require('Comment.ft')
 
 --tackling the antlr problem
@@ -9,3 +11,5 @@
 -- })
 
 -- ft.antlr = '//%s'
+-- end
+}
