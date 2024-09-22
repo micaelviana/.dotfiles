@@ -160,4 +160,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
-let g:coc_global_extensions = ['coc-pairs','coc-snippets','coc-json','coc-sh','coc-sumneko-lua' ,'coc-clangd', 'coc-pyright', 'coc-vimlsp','coc-powershell']
+" let g:coc_global_extensions = ['coc-pairs','coc-snippets','coc-json','coc-sh','coc-sumneko-lua' ,'coc-clangd', 'coc-pyright', 'coc-vimlsp','coc-emmet']
