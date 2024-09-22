@@ -31,20 +31,12 @@ require("lazy").setup({
 
     spec = {
         -- add your plugins here
-        {
-            'numToStr/Comment.nvim',
-            opts = {},
-        },
         -- themes
         -- define a theme: {user/repo, lazy=false, priority=1000, vim.cmd.colorscheme('name')}
         { "EdenEast/nightfox.nvim" ,lazy=true}, -- lazy
         { "bluz71/vim-nightfly-colors", name = "nightfly" ,lazy=true},
-        {
-            'sainnhe/sonokai',lazy=true
-        },
-        {
-            "rebelot/kanagawa.nvim", lazy=true
-        },
+        {'sainnhe/sonokai',lazy=true},
+        {"rebelot/kanagawa.nvim", lazy=true},
         { "rose-pine/neovim", name = "rose-pine" ,lazy=true},
         {
             'sainnhe/everforest',
@@ -58,15 +50,7 @@ require("lazy").setup({
             end
         },
         {
-            'smoka7/hop.nvim',
-            version = "*",
-            opts = {
-                keys = 'etovxqpdygfblzhckisuran'
-            }
-        },
-        {
             "ibhagwan/fzf-lua",
-            -- optional for icon support
             dependencies = { "nvim-tree/nvim-web-devicons" },
         },
 
@@ -82,7 +66,7 @@ require("lazy").setup({
             end,
         },
 
-        'https://github.com/nvim-pack/nvim-spectre',
+        {'https://github.com/nvim-pack/nvim-spectre', event='VeryLazy'},
 
         -- install with yarn or npm
         {
@@ -93,7 +77,7 @@ require("lazy").setup({
                 vim.g.mkdp_filetypes = { "markdown" }
             end,
             ft = { "markdown" },
-        },
+            },
         'nvim-lua/plenary.nvim',
         "nvim-treesitter/nvim-treesitter",
 
@@ -102,7 +86,7 @@ require("lazy").setup({
             branch = 'master',
         },
         'psliwka/vim-smoothie',
-        'https://github.com/tpope/vim-fugitive',
+        {'https://github.com/tpope/vim-fugitive',event='VeryLazy'},
         'https://github.com/haya14busa/is.vim',
         'https://github.com/honza/vim-snippets',
         {'https://github.com/lambdalisue/vim-suda', event = 'VeryLazy'},
@@ -130,7 +114,7 @@ require("lazy").setup({
     }, --end mica
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { "kanagawa" } },
+    install = { colorscheme = { "everforest" } },
     -- automatically check for plugin updates
 })
 

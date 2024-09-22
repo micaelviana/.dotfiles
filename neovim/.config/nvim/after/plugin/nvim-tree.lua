@@ -13,6 +13,7 @@ vim.keymap.set('n','T','<cmd>NvimTreeToggle<cr>',{noremap=true,silent=true})
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  sync_root_with_cwd = true,
   view = {
     width = 30,
   },
