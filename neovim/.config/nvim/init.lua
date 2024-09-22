@@ -105,12 +105,7 @@ require("lazy").setup({
         'https://github.com/tpope/vim-fugitive',
         'https://github.com/haya14busa/is.vim',
         'https://github.com/honza/vim-snippets',
-        'https://github.com/lambdalisue/vim-suda',
-        {
-            'nvimdev/dashboard-nvim',
-            event = 'VimEnter',
-            dependencies = { { 'nvim-tree/nvim-web-devicons' } }
-        },
+        {'https://github.com/lambdalisue/vim-suda', event = 'VeryLazy'},
 
         {
             "christoomey/vim-tmux-navigator",
