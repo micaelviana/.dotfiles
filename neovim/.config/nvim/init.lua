@@ -1,8 +1,8 @@
--- ~~~~~load plugins
+-- =====LOAD PLUGINS
 require('config.lazy')
 
+-- ========GENERAL OPTIONS
 local opt=vim.opt
-
 opt.hidden=true
 opt.confirm=true
 opt.number=true
@@ -49,11 +49,10 @@ if vim.fn.has('wsl') == 1 then
     }
 end
 
-
+-- COMMANDS
 vim.api.nvim_create_user_command('WindowsCleaning','%s/\r/' , {})
 
--- ~~~~~~~~~~KEYMAPS
-
+-- ==========KEYMAPS
 local keyset = vim.keymap.set
 
 -- Set mapleader
@@ -101,7 +100,21 @@ keyset('n', 'x', '"_x', { noremap = true })
 keyset('n', 'X', '"_x', { noremap = true })
 keyset('n', '<del>', '"_x', { noremap = true })
 
+-- =================AUTOCOMMANDS
+-- Highlight yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank { higroup = 'IncSearch' }
+  end,
+})
 
--- source remaning vim configuration
-local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
-vim.cmd.source(vimrc)
+-- FUNCTIONS
+-- Function to change the working directory to the directory of the current file
+local function ChangeCurrentDirectory()
+  vim.cmd('lcd %:p:h')
+  vim.cmd('pwd')
+end
+
+-- Keymap to call the function
+vim.keymap.set('n', '<space>z', ChangeCurrentDirectory, { noremap = true })
