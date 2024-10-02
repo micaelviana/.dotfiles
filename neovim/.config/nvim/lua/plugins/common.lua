@@ -1,5 +1,4 @@
 return {
-
     -- add your plugins here
     {
         'neoclide/coc.nvim',
@@ -16,9 +15,6 @@ return {
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
-        config = function()
-            require("nvim-tree").setup {}
-        end,
     },
 
     {
