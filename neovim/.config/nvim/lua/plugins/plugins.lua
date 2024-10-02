@@ -1,4 +1,5 @@
 return {
+
     -- add your plugins here
     {
         'neoclide/coc.nvim',
@@ -22,7 +23,7 @@ return {
 
     {
         'https://github.com/nvim-pack/nvim-spectre',
-            event = 'VeryLazy',
+        lazy=true,
             keys={
 
                 { '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {desc = "Toggle Spectre"}},
