@@ -40,17 +40,17 @@ return{
                     action = 'FzfLua files'
                 },
                 {
-                    icon = '  ',
-                    desc = 'Configuration',
-                    key = 'c',
-                    keymap = ':e $MYVIMRC',
-                    action = 'edit ~/.config/nvim/init.lua'
+                    icon = ' 󰗊 ',
+                    desc = 'Grep term',
+                    key = 'g',
+                    keymap = 'tg',
+                    action = 'FzfLua live_grep'
                 },
                 {
                     icon = ' 󰜎 ',
                     desc = 'Quit neovim',
                     key = 'q',
-                    keymap = ':quit',
+                    keymap = '<space>q',
                     action = 'quit'
                 }
             },
