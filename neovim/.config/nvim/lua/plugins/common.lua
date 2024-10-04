@@ -1,9 +1,8 @@
 return {
-    -- add your plugins here
-    {
-        'neoclide/coc.nvim',
+{
+    'neoclide/coc.nvim',
         branch = 'release',
-    },
+},
     {
         "ibhagwan/fzf-lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -11,7 +10,7 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
-        lazy = false,
+        opts={},
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
@@ -33,7 +32,7 @@ return {
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
+        build = "cd app && npm install",
         init = function()
             vim.g.mkdp_filetypes = { "markdown" }
         end,
