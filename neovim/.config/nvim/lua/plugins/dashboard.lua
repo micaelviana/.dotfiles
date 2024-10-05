@@ -22,35 +22,30 @@ return{
                     icon = '  ',
                     desc = 'New File',
                     key = 'n',
-                    keymap = ':enew',
                     action = 'enew'
                 },
                 {
                     icon = ' 󰁯 ',
                     desc = 'Recent Files',
                     key = 'r',
-                    keymap = 'Ctrl r',
                     action = 'FzfLua oldfiles'
                 },
                 {
                     icon = '  ',
                     desc = 'Find Files',
                     key = 'f',
-                    keymap = 'Ctrl p',
                     action = 'FzfLua files'
                 },
                 {
                     icon = ' 󰗊 ',
-                    desc = 'Grep term',
+                    desc = 'Grep text',
                     key = 'g',
-                    keymap = 'tg',
                     action = 'FzfLua live_grep'
                 },
                 {
                     icon = ' 󰜎 ',
                     desc = 'Quit neovim',
                     key = 'q',
-                    keymap = '<space>q',
                     action = 'quit'
                 }
             },
