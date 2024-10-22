@@ -13,6 +13,8 @@ alias usage='du -h -d1'
 alias rm='trash-put'
 alias lastmod='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 alias e='exit'
+#ohmyzsh
+alias cpf="copyfile"
 #git
 alias g="git"
 alias gc="git clone --recurse-submodules"
