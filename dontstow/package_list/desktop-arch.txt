@@ -5,6 +5,7 @@ bat
 btop
 copyq
 espanso
+fastfetch
 fd
 flameshot
 fzf
@@ -15,7 +16,6 @@ links
 localsend-bin
 lsd
 man-pages
-neofetch
 neovim
 net-tools
 okular
