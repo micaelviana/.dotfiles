@@ -45,7 +45,13 @@ return {
         'mg979/vim-visual-multi',
         branch = 'master',
     },
-    'psliwka/vim-smoothie',
+
+{
+  "karb94/neoscroll.nvim",
+  config = function ()
+    require('neoscroll').setup({})
+  end
+    },
     { 'https://github.com/tpope/vim-fugitive',     event = 'VeryLazy' },
     'https://github.com/haya14busa/is.vim',
     'https://github.com/honza/vim-snippets',
