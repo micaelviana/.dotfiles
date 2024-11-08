@@ -22,7 +22,6 @@ okular
 otf-codenewroman-nerd
 pacman-contrib
 qbittorrent
-ranger
 ripgrep
 sesh-bin
 shellcheck
@@ -34,6 +33,7 @@ tldr
 trash-cli
 tree
 ttf-hack-nerd
+ttf-nerd-fonts-symbols-mono
 unzip
 upscayl-bin
 vagrant
