@@ -15,7 +15,7 @@ local logo = [[
          ''=--'
 ]]
 
-logo = string.rep("\n", 16) .. logo
+logo = string.rep("\n", 8) .. logo
 
 
 return{
