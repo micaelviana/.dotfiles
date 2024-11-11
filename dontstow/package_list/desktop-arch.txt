@@ -1,4 +1,6 @@
 arch-install-scripts
+microsoft-edge-stable-bin
+ttf-ms-win11-auto
 base
 base-devel
 bat
