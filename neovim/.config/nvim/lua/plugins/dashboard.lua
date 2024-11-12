@@ -19,8 +19,7 @@
 /\O\/\/*/\/O/\
       ||      
       ||      
-
-
+||
 ]]
 -- local logo = [[
 --           __-----__
@@ -39,7 +38,7 @@
 --          ''=--'
 -- ]]
 --
-logo = string.rep("\n", 8) .. logo
+logo = string.rep("\n", 9) .. logo
 
 
 return{
