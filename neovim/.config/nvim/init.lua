@@ -27,6 +27,10 @@ opt.backup=false
 opt.writebackup=false
 opt.swapfile=false
 
+--enable transparency in Vim if the terminal support it
+--with Wezterm I can toggle transparency with a shortcut
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
