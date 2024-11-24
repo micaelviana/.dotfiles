@@ -1,6 +1,4 @@
 arch-install-scripts
-microsoft-edge-stable-bin
-ttf-ms-win11-auto
 base
 base-devel
 bat
@@ -18,6 +16,7 @@ links
 localsend-bin
 lsd
 man-pages
+microsoft-edge-stable-bin
 neovim
 net-tools
 okular
@@ -30,11 +29,12 @@ shellcheck
 sshfs
 stow
 sublime-text-4
-telegram-desktop-bin
+telegram-desktop
 tldr
 trash-cli
 tree
 ttf-hack-nerd
+ttf-ms-win11-auto
 ttf-nerd-fonts-symbols-mono
 unzip
 upscayl-bin
