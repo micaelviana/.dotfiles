@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 #Common aliases
 alias vi="nvim"
 alias vid="nvim ."

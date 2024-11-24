@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 #EXPORTS
 eval "$(zoxide init zsh)"
 export EDITOR=nvim

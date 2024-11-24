@@ -13,7 +13,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 setopt SHARE_HISTORY      # Share history between sessions
 
-#Plugins
+# Plugins
 plugins=(
     copyfile 
     copybuffer 
@@ -31,7 +31,6 @@ source $ZSH/oh-my-zsh.sh
 #source my config
 source $HOME/.config/zsh/export_rc.sh
 source $HOME/.config/zsh/alias_rc.sh
-source $HOME/.config/zsh/function_rc.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
