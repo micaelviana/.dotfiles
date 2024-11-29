@@ -29,24 +29,22 @@ alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 
-#detect distro
-if [ -f "/etc/arch-release" ]; then
-  alias pacin="sudo pacman -S --needed"
-  alias pacud="sudo pacman -Syu"
-  alias pacse="pacman -Ss"
-  alias pacre="sudo pacman -Rns"
-  alias pacun="sudo rm /var/lib/pacman/db.lck"
-  alias paccl='sudo pacman -Rs "$(pacman -Qtdq)"'
-  alias aurup='yay -Sua'
-  alias aurin='yay -S'
-  alias aurse='yay -Ss'
-  alias aurre='yay -Rns'
-  alias aurli="pacman -Qm"
-else
-# assume ubuntu based
-  alias aptin="sudo nala install"
-  alias aptud="sudo nala update"
-  alias aptupg="sudo nala upgrade"
-  alias aptse="nala search"
-  alias aptre="sudo nala purge"
-fi
+#Arch aliases
+alias pacin="sudo pacman -S --needed"
+alias pacud="sudo pacman -Syu"
+alias pacse="pacman -Ss"
+alias pacre="sudo pacman -Rns"
+alias pacun="sudo rm /var/lib/pacman/db.lck"
+alias paccl='sudo pacman -Rs "$(pacman -Qtdq)"'
+alias aurup='yay -Sua'
+alias aurin='yay -S'
+alias aurse='yay -Ss'
+alias aurre='yay -Rns'
+alias aurli="pacman -Qm"
+
+#Ubuntu aliases
+alias aptin="sudo nala install"
+alias aptud="sudo nala update"
+alias aptupg="sudo nala upgrade"
+alias aptse="nala search"
+alias aptre="sudo nala purge"

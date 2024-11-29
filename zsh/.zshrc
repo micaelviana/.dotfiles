@@ -13,6 +13,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 setopt SHARE_HISTORY      # Share history between sessions
 
+# Evals
+eval "$(zoxide init zsh)"
+
+#Exports
+export EDITOR=nvim
+export SUDO_EDITOR=nvim
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+
 # Plugins
 plugins=(
     copyfile 
@@ -21,15 +30,15 @@ plugins=(
     forgit
     nvm
     fzf 
+    fast-syntax-highlighting
     zsh-autosuggestions 
-    zsh-syntax-highlighting
 )
 
 #Sources oh-my-zsh config file
 source $ZSH/oh-my-zsh.sh
 
 #source my config
-source $HOME/.config/zsh/export_rc.sh
+source $HOME/.config/zsh/path_rc.sh
 source $HOME/.config/zsh/alias_rc.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

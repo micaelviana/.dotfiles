@@ -1,10 +1,3 @@
-#EXPORTS
-eval "$(zoxide init zsh)"
-export EDITOR=nvim
-export SUDO_EDITOR=nvim
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export MANROFFOPT="-c"
-
 #from ThePrimeagen: add a folder to PATH
 addToPath() {
     if [[ "$PATH" != *"$1"* ]]; then
