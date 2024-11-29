@@ -53,6 +53,16 @@ end)
 -- COMMANDS
 vim.api.nvim_create_user_command('WindowsCleaning','%s/\r/' , {})
 
+
+-- =================AUTOCOMMANDS
+-- Highlight yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank { higroup = 'IncSearch' }
+  end,
+})
+
 -- ==========KEYMAPS
 local keyset = vim.keymap.set
 
@@ -101,21 +111,10 @@ keyset('n', 'x', '"_x', { noremap = true })
 keyset('n', 'X', '"_x', { noremap = true })
 keyset('n', '<del>', '"_x', { noremap = true })
 
--- =================AUTOCOMMANDS
--- Highlight yank
-vim.api.nvim_create_autocmd('TextYankPost', {
-  pattern = '*',
-  callback = function()
-    vim.highlight.on_yank { higroup = 'IncSearch' }
-  end,
-})
+-- Keymap to change the working directory to the directory of the current file
+vim.keymap.set('n', '<space>z', function ()
+    vim.cmd('lcd %:p:h')
+    vim.cmd('pwd')
+end, { noremap = true })
 
--- FUNCTIONS
--- Function to change the working directory to the directory of the current file
-local function ChangeCurrentDirectory()
-  vim.cmd('lcd %:p:h')
-  vim.cmd('pwd')
-end
 
--- Keymap to call the function
-vim.keymap.set('n', '<space>z', ChangeCurrentDirectory, { noremap = true })
