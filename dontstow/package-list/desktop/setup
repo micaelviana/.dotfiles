@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+else
+    OS=$(uname -s)
+fi
+
+case $OS in
+    "Ubuntu"|"Debian GNU/Linux")
+        xargs -a desktop-ubuntu.txt sudo nala install
+        ;;
+    "Arch Linux")
+        yay -S --noconfirm --needed - < desktop-arch.txt        ;;
+    *)
+        echo "Error"
+        ;;
+esac
