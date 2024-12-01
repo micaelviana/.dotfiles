@@ -5,7 +5,7 @@
 Clone into your `$HOME` directory
 
 ```bash
-git clone https://github.com/micaelviana/.dotfiles.git
+git clone git@github.com:micaelviana/.dotfiles.git
 ```
 
 ## Ubuntu
