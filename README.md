@@ -4,6 +4,11 @@
 
 Clone into your `$HOME` directory
 
+Https:
+```bash
+git clone https://github.com/micaelviana/.dotfiles.git
+```
+Ssh:
 ```bash
 git clone git@github.com:micaelviana/.dotfiles.git
 ```
