@@ -12,7 +12,8 @@ case $OS in
         xargs -a desktop-ubuntu.txt sudo nala install
         ;;
     "Arch Linux")
-        yay -S --noconfirm --needed - < desktop-arch.txt        ;;
+        yay -S --noconfirm --needed - < desktop-arch.txt        
+        ;;
     *)
         echo "Error"
         ;;
