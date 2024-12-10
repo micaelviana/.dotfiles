@@ -9,7 +9,9 @@ fi
 
 case $OS in
     "Ubuntu"|"Debian GNU/Linux")
-        xargs -a wsl-ubuntu.txt sudo nala install
+        while read -r package; do
+            sudo nala install -y $package || echo "Package $package not found."
+        done < wsl-ubuntu.txt
         ;;
     "Arch Linux")
         yay -S --noconfirm --needed - < wsl-arch.txt
