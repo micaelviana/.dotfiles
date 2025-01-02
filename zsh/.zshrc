@@ -25,6 +25,7 @@ function y() {
 
 # Evals
 eval "$(zoxide init zsh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #Aliases
 #Common aliases
