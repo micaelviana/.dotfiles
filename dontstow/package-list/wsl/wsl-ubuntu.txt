@@ -6,6 +6,15 @@ inetutils
 links
 lsd
 man-db
+batcat
+fd-find
+ripgrep
+wl-clipboard
+zoxide
+zsh
+fzf
+wget
+curl
 man-pages
 nano
 neovim
@@ -17,6 +26,5 @@ tldr
 trash-cli
 tree
 unzip
-wget
 xdg-utils
 zip
