@@ -1,7 +1,6 @@
 arch-install-scripts
 base
 base-devel
-bat-extras
 btop
 dos2unix
 fastfetch
