@@ -73,9 +73,9 @@ alias aurre='yay -Rns'
 alias aurli="pacman -Qm"
 
 #Ubuntu aliases
-alias aptin="sudo nala install"
-alias aptud="sudo nala update"
-alias aptupg="sudo nala upgrade"
+alias aptin="sudo nala install -y"
+alias aptud="sudo nala update -y"
+alias aptupg="sudo nala upgrade -y"
 alias aptse="nala search"
 alias aptre="sudo nala purge"
 
