@@ -3,6 +3,7 @@ base
 base-devel
 btop
 dos2unix
+entr
 fastfetch
 glow
 inetutils
