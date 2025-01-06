@@ -44,11 +44,9 @@ return {
         branch = 'master',
     },
 
-{
-  "karb94/neoscroll.nvim",
-  config = function ()
-    require('neoscroll').setup({})
-  end
+    {
+    "karb94/neoscroll.nvim",
+    opts={}
     },
     { 'https://github.com/tpope/vim-fugitive',     event = 'VeryLazy' },
     'https://github.com/haya14busa/is.vim',
