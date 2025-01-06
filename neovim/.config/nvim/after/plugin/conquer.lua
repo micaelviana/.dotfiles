@@ -188,4 +188,4 @@ keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
 
 
-vim.g.coc_global_extensions = {'coc-pairs','coc-snippets','coc-json','coc-sh','coc-sumneko-lua' ,'coc-clangd', 'coc-pyright', 'coc-vimlsp','coc-emmet', 'coc-prettier'}
+vim.g.coc_global_extensions = {'coc-pairs','coc-snippets','coc-json','coc-sh','coc-sumneko-lua' ,'coc-clangd', 'coc-pyright', 'coc-vimlsp','coc-emmet', 'coc-prettier','coc-css'}
