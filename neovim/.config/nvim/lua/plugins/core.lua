@@ -13,6 +13,8 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
     },
+    --smart splits 
+    { 'mrjones2014/smart-splits.nvim' },
 
     {
         'https://github.com/nvim-pack/nvim-spectre',
@@ -27,15 +29,12 @@ return {
     },
 
     -- install with yarn or npm
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && npm install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
+{
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+},
     'nvim-lua/plenary.nvim',
     "nvim-treesitter/nvim-treesitter",
 
