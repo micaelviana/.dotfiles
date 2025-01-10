@@ -6,6 +6,7 @@
             "filetypes": ["sh"]
         },
     },
+    "Lua.diagnostics.globals" : ["vim"],
     "snippets.userSnippetsDirectory": "~/.config/nvim/coc/ultisnips",
     "colors.enable": true,
     "powershell.integratedConsole.showOnStartup": false,
