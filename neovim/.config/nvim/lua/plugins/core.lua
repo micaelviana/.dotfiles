@@ -13,8 +13,6 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
     },
-    --smart splits 
-    { 'mrjones2014/smart-splits.nvim' },
 
     {
         'https://github.com/nvim-pack/nvim-spectre',
