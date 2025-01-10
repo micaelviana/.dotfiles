@@ -7,3 +7,4 @@ export NVM_DIR="$HOME/.nvm"
 npm i -g bash-language-server
 npm i -g neovim
 npm i -g tree-sitter
+npm i -g live-server
