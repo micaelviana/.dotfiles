@@ -23,12 +23,6 @@ echo "Detected: $OS $VER"
 if [[ "$OS" == "ubuntu" || "$OS" == "debian" ]]; then
     sudo apt update
     sudo apt install -y procps build-essential curl file git
-elif [[ "$OS" == "fedora" ]]; then
-    sudo dnf groupinstall -y "Development Tools"
-    sudo dnf install -y curl file git procps-ng
-elif [[ "$OS" == "centos" ]]; then
-    sudo yum groupinstall -y "Development Tools"
-    sudo yum install -y curl file git procps-ng
 elif [[ "$OS" == "arch" ]]; then
     sudo pacman -Syu --noconfirm base-devel curl file git procps-ng
 else
