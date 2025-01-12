@@ -45,7 +45,6 @@ return {
     "karb94/neoscroll.nvim",
     opts={}
     },
-    { 'https://github.com/tpope/vim-fugitive',     event = 'VeryLazy' },
     'https://github.com/haya14busa/is.vim',
     'https://github.com/honza/vim-snippets',
     { 'https://github.com/lambdalisue/vim-suda', event = 'VeryLazy' },
