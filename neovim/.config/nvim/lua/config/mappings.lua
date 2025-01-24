@@ -7,6 +7,7 @@ vim.g.mapleader = " "
 -- New lines
 keyset('n', '<return>', 'o<esc>', { noremap = true })
 
+
 -- Save and close
 keyset('n', '<leader>w', ':w<cr>', { silent = true, noremap = true })
 keyset('n', '<leader>q', ':xa<cr>', { silent = true, noremap = true })
@@ -14,7 +15,11 @@ keyset('n', '\\w', ':w<cr>', { silent = true, noremap = true })
 keyset('n', '\\q', ':xa<cr>', { silent = true, noremap = true })
 keyset('n', '\\z', ':xa<cr>', { silent = true, noremap = true })
 
--- persistent indentation on visual mode
+--Splits
+keyset('n','<space>h','<cmd>sp<cr>',opts)
+keyset('n','<space>v','<cmd>vsp<cr>',opts)
+
+-- Persistent indentation on visual mode
 keyset('v','<','<gv',opts)
 keyset('v','>','>gv',opts)
 
