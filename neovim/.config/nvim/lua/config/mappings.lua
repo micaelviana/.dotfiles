@@ -1,4 +1,5 @@
 local keyset = vim.keymap.set
+local opts = {noremap=true, silent=true}
 
 -- Set mapleader
 vim.g.mapleader = " "
@@ -12,6 +13,10 @@ keyset('n', '<leader>q', ':xa<cr>', { silent = true, noremap = true })
 keyset('n', '\\w', ':w<cr>', { silent = true, noremap = true })
 keyset('n', '\\q', ':xa<cr>', { silent = true, noremap = true })
 keyset('n', '\\z', ':xa<cr>', { silent = true, noremap = true })
+
+-- persistent indentation on visual mode
+keyset('v','<','<gv',opts)
+keyset('v','>','>gv',opts)
 
 -- Close without save
 keyset('n', 'Q', ':qa!<cr>', { silent = true, noremap = true })
