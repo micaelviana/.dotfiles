@@ -122,6 +122,8 @@ nnoremap <silent><leader>q :xa <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \q :xa <cr>
 nnoremap <silent> \z :xa <cr>
+"Close without save
+nnoremap <silent> Q :qa!<cr> 
 "make executable
 nnoremap <silent><space>x :!chmod +x %<cr>
 "paste in insert mode using Ctrl+V
@@ -143,6 +145,16 @@ noremap! <C-h> <C-w>
 noremap x "_x
 noremap X "_x
 noremap <Del> "_x
+
+
+"Splits
+nnoremap <silent> <space>h <cmd>sp<cr>
+nnoremap <silent> <space>v <cmd>vsp<cr>
+
+"Persistent indentation on visual mode
+vnoremap <silent> < <gv 
+vnoremap <silent> > >gv 
+
 
 "{{From plugins}}
 "lightline just works in VIM if you put this
