@@ -159,7 +159,7 @@ vnoremap <silent> > >gv
 "{{From plugins}}
 "lightline just works in VIM if you put this
 set laststatus=2
-let g:lightline={'colorscheme':'rosepine'}
+let g:lightline={'colorscheme':'nord'}
 "fzf
 nnoremap <c-p> :Files <cr>
 nnoremap tf :Files <cr>
@@ -172,4 +172,4 @@ let g:mucomplete#enable_auto_at_startup = 1
 
 " Select the complete menu item like CTRL+y would.
 inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
-colorscheme rosepine
+colorscheme nord
