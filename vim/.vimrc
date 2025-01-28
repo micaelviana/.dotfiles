@@ -83,34 +83,6 @@ function ChangeCurrentDirectory()
 endfunction
 nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
 
-"-------------------CLIPBOARD, if windows
-"detect WSL is harder in VIM than in Neovim, so we use this function
-let isWSL=0
-let uname = substitute(system('uname'),'\n','','')
-if uname == 'Linux'
-    let lines = readfile("/proc/version")
-    if lines[0] =~ "microsoft"
-        let isWSL = 1
-    else
-        let isWSL = 0
-    endif
-endif
-
-if isWSL == 1
-    let g:clipboard = {
-                \   'name': 'win32yank-wsl',
-                \   'copy': {
-                \      '+': 'win32yank.exe -i --crlf',
-                \      '*': 'win32yank.exe -i --crlf',
-                \    },
-                \   'paste': {
-                \      '+': 'win32yank.exe -o --lf',
-                \      '*': 'win32yank.exe -o --lf',
-                \   },
-          \   'cache_enabled': 0,
-          \ }
-endif
-
 "----------KEYMAPS----------
 "set mapleader
 let mapleader = " "
