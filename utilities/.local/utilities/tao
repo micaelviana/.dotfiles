@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
 
-[ -z "$TMUX"  ] && { tmux attach || tmux new-session -s $(basename "$PWD"); }
+if [ -z "$TMUX" ]; then
+    # Tenta conectar a uma sessão existente primeiro
+    tmux attach || {
+        # Se não conseguir conectar, pega o nome do diretório atual
+        dirname=$(basename "$PWD")
+        # Remove o ponto inicial se existir e substitui outros pontos por underscore
+        session_name=$(echo "$dirname" | sed 's/^\.//' | sed 's/\./_/g')
+        # Cria nova sessão com o nome tratado
+        tmux new-session -s "$session_name"
+    }
+fi
