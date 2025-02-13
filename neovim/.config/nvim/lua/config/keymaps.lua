@@ -1,11 +1,2 @@
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   ../../../../../keymaps.lua
-	modified:   ../../init.lua
-	modified:   keymaps.lua
-
-no changes added to commit (use "git add" and/or "git commit -a")
+[master b4cfeb4] nvim, rename mappings.lua -
+ 3 files changed, 12 insertions(+), 65 deletions(-)
