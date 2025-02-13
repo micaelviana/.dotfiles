@@ -1,3 +1,4 @@
-[master 59a867a] nvim, rename mappings.lua -
- 1 file changed, 64 deletions(-)
- delete mode 100644 neovim/.config/nvim/lua/config/mappings.lua
+[master 6498862] nvim, rename mappings.lua -
+ 2 files changed, 67 insertions(+)
+ create mode 100644 keymaps.lua
+ create mode 100644 neovim/.config/nvim/lua/config/keymaps.lua
