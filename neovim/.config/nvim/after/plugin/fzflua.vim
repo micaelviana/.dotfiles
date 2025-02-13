@@ -5,3 +5,4 @@ nnoremap tb :FzfLua buffers <CR>
 
 nnoremap tr :FzfLua oldfiles <CR>
 nnoremap tg :FzfLua live_grep <CR>
+nnoremap tc :FzfLua builtin <CR>
